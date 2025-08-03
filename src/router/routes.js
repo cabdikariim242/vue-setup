@@ -6,7 +6,6 @@ const tabs = () =>  import('@/views/tabs.vue')
 const TableViews = () =>  import('@/views/TableViews.vue')
 const AccordionView = () =>  import('@/views/AccordionView.vue')
 const DatePicker = () =>  import('@/views/DatePicker.vue')
-const TomSelectView = () =>  import('@/views/TomSelectView.vue')
 const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
 
 export default [
@@ -54,11 +53,7 @@ export default [
     component: AccordionView
    
   },
-    {
-    path: '/tomselectView',
-    name: 'TomSelectView',
-    component: TomSelectView
-  },
+  
       {
     path: '/ImageZoomView',
     name: 'ImageZoomView',
