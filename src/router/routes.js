@@ -1,0 +1,68 @@
+const layout = () =>  import('@/layout/index.vue')
+const buttons = () =>  import('@/views/buttons.vue')
+const inputGroup = () =>  import('@/views/inputGroup.vue')
+const alert = () =>  import('@/views/alert.vue')
+const tabs = () =>  import('@/views/tabs.vue')
+const TableViews = () =>  import('@/views/TableViews.vue')
+const AccordionView = () =>  import('@/views/AccordionView.vue')
+const DatePicker = () =>  import('@/views/DatePicker.vue')
+const TomSelectView = () =>  import('@/views/TomSelectView.vue')
+const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
+
+export default [
+  {
+    path: '/',
+    name: 'layout',
+    component: layout
+  },
+  {
+    path: '/buttons',
+    name: 'buttons',
+    component: buttons
+  },
+  {
+    path: '/inputGroup',
+    name: 'inputGroup',
+    component: inputGroup
+  },
+  {
+    path: '/alert',
+    name: 'alert',
+    component: alert
+  },
+  {
+    path: '/tabs',
+    name: 'tabs',
+    component: tabs
+   
+  },
+  {
+    path: '/TableViews',
+    name: 'TableViews',
+    component: TableViews
+   
+  },
+  {
+    path: '/DatePicker',
+    name: 'DatePicker',
+    component: DatePicker
+   
+  },
+  {
+    path: '/AccordionView',
+    name: 'AccordionView',
+    component: AccordionView
+   
+  },
+    {
+    path: '/tomselectView',
+    name: 'TomSelectView',
+    component: TomSelectView
+  },
+      {
+    path: '/ImageZoomView',
+    name: 'ImageZoomView',
+    component: ImageZoomView
+  },
+ 
+]

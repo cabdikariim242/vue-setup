@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "select": "^1.1.2",
+    "tom": "^0.4.1",
+    "tom-select": "^2.4.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
