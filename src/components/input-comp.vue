@@ -1,5 +1,5 @@
 <template>
-    <input :value="modelValue" :placeholder="title" :type="type" :class="customClass"
+    <input :value="modelValue" :placeholder="title" :type="type" :disabled="disabled" :class="customClass"
       @input="$emit('update:modelValue', $event.target.value)" v-bind="$attrs">
 </template>
 
@@ -23,10 +23,15 @@ export default {
             default: ''
         },
         required:{
-            type:String,
+            type:Boolean,
+            default:false
+        }
+        },
+        disabled:{
+            type:Boolean,
             default:false
         }
      }
   
-}
+
 </script>
