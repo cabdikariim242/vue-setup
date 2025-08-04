@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div
-      class="absolute top-0 left-0 right-0 h-[300px]"
+      class="absolute top-0 left-0 right-0 h-[300px] z-9"
       :class="[
         'transition-colors duration-300',
         isScrollingUp ? 'bg-[#1b4b76]' : 'bg-white',
@@ -14,11 +14,11 @@
             ? 'bg-[#1b4b76]'
             : 'bg-[#051662] px-3 transtiton-all duration-300',
         ]"
-        class=" flex justify-between items-center fixed top-5 lg:left-[115px] left-[5px] md:left-[115px] right-5 rounded-lg h-[60px]"
+        class="flex z-[10] justify-between items-center fixed top-5 lg:left-[115px] left-[5px] md:left-[115px] right-5 rounded-lg h-[60px]"
       >
         
 
-    <div class="flex lg:hidden md:hidden sm:hidden ">
+    <div class="flex lg:hidden md:hidden sm:hidden">
         <i @click="$emit('toggle-this', !isopen)" class="fa-solid fa-bars text-[25px] text-white p-[28px]"></i>
 
         <i class="fa-solid fa-magnifying-glass mt-8 text-white text-[18px]"></i>
