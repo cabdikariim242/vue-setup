@@ -1,6 +1,6 @@
 <template>
   <BaseCard
-    class="flex w-full mt-[502px] md:ml-[150px] ml-[10px] lg:ml-[100px] z-[8] lg:mr-[350px] md:mr-[150px] mr-[10px]"
+    class="flex w-full mt-[400px] md:ml-[150px] ml-[10px] lg:ml-[100px] z-[8] lg:mr-[350px] md:mr-[150px] mr-[10px]"
   >
     <div class="flex w-full flex-col gap-4 justify-center relative">
       <label class="text-[gold]" for="date">Pick Date</label>

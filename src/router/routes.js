@@ -7,6 +7,7 @@ const TableViews = () =>  import('@/views/TableViews.vue')
 const AccordionView = () =>  import('@/views/AccordionView.vue')
 const DatePicker = () =>  import('@/views/DatePicker.vue')
 const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
+const RegularForm = () =>  import('@/views/RegularForm.vue')
 
 export default [
   {
@@ -58,6 +59,12 @@ export default [
     path: '/ImageZoomView',
     name: 'ImageZoomView',
     component: ImageZoomView
+  },
+  
+      {
+    path: '/RegularForm',
+    name: 'RegularForm',
+    component: RegularForm
   },
  
 ]
