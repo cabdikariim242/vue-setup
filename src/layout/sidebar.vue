@@ -325,6 +325,16 @@
           <p class="text-[15px] text-[#465569] font-[500]">ImageZoomView</p>
         </div>
       </router-link>
+
+      <router-link
+        :to="{ name: 'RegularForm' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
+         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <p class="text-[15px] text-[#465569] font-[500]">RegularForm</p>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
