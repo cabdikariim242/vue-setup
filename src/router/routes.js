@@ -1,3 +1,5 @@
+
+
 const layout = () =>  import('@/layout/index.vue')
 const buttons = () =>  import('@/views/buttons.vue')
 const inputGroup = () =>  import('@/views/inputGroup.vue')
@@ -8,7 +10,7 @@ const AccordionView = () =>  import('@/views/AccordionView.vue')
 const DatePicker = () =>  import('@/views/DatePicker.vue')
 const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
 const RegularForm = () =>  import('@/views/RegularForm.vue')
-
+const FormView = () =>  import('@/views/FormView.vue')
 export default [
   {
     path: '/',
@@ -66,5 +68,11 @@ export default [
     name: 'RegularForm',
     component: RegularForm
   },
+      {
+    path: '/FormView',
+    name: 'FormView',
+    component: FormView
+  },
+
  
 ]

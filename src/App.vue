@@ -1,12 +1,5 @@
 <template>
   <layout/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 536b3150daa09a6d605106f7cd7a6cc36a6abd48
-=======
->>>>>>> 536b3150daa09a6d605106f7cd7a6cc36a6abd48
 </template>
 
 <script>
