@@ -1,6 +1,6 @@
 <template>
   <layout/>
-\</template>
+</template>
 
 <script>
 import layout from '@/layout/index.vue'
