@@ -8,6 +8,7 @@ const AccordionView = () =>  import('@/views/AccordionView.vue')
 const DatePicker = () =>  import('@/views/DatePicker.vue')
 const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
 const RegularForm = () =>  import('@/views/RegularForm.vue')
+const Dropdown = () =>  import('@/views/Dropdown.vue')
 
 export default [
   {
@@ -65,6 +66,11 @@ export default [
     path: '/RegularForm',
     name: 'RegularForm',
     component: RegularForm
+  },
+      {
+    path: '/Dropdown',
+    name: 'Dropdown',
+    component: Dropdown
   },
  
 ]
