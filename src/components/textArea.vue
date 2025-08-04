@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "BaseTextarea",
+  name: "textarea",
   props: {
     modelValue: String,
     label: String,
