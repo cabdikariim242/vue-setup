@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <div
-      class="absolute top-0 left-0 right-0 h-[300px] z-9"
+      class="absolute top-0 left-0 right-0 h-[300px]"
       :class="[
         'transition-colors duration-300',
         isScrollingUp ? 'bg-[#1b4b76]' : 'bg-white',

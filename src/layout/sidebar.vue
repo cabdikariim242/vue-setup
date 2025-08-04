@@ -17,11 +17,11 @@
           ></i>
           <p
             v-if="!toggle"
-            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-bold font-[500]"
+            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px]  font-[500]"
           >
             ECHO
           </p>
-          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-bold font-[500]">ECHO</p>
+          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px]  font-[500]">ECHO</p>
         </div>
         <div class="mr-2">
           <i
@@ -229,7 +229,7 @@
           <i
             class="fa-brands fa-stackpath text-[#206c93] text-[35px] pl-6 pr-3 pt-3 text-5 rounded-full"
           ></i>
-          <p class="mt-5 text-[#465569] font-[500] ml-[20px] font-bold">ECHO</p>
+          <p class="mt-5 text-[#465569] font-[500] ml-[20px]">ECHO</p>
         </div>
         <div class="mr-2">
           <i
@@ -323,6 +323,16 @@
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">ImageZoomView</p>
+        </div>
+      </router-link>
+
+      <router-link
+        :to="{ name: 'RegularForm' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
+         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <p class="text-[15px] text-[#465569] font-[500]">RegularForm</p>
         </div>
       </router-link>
     </div>
