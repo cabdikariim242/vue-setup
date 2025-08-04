@@ -17,11 +17,11 @@
           ></i>
           <p
             v-if="!toggle"
-            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-bold font-[500]"
+            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px]  font-[500]"
           >
             ECHO
           </p>
-          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-bold font-[500]">ECHO</p>
+          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px]  font-[500]">ECHO</p>
         </div>
         <div class="mr-2">
           <i
@@ -229,7 +229,7 @@
           <i
             class="fa-brands fa-stackpath text-[#206c93] text-[35px] pl-6 pr-3 pt-3 text-5 rounded-full"
           ></i>
-          <p class="mt-5 text-[#465569] font-[500] ml-[20px] font-bold">ECHO</p>
+          <p class="mt-5 text-[#465569] font-[500] ml-[20px]">ECHO</p>
         </div>
         <div class="mr-2">
           <i
