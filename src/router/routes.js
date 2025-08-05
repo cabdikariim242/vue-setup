@@ -16,6 +16,7 @@ const RadioButton = () =>  import('@/views/RadioButton.vue')
 const TextArea = () =>  import('@/views/TextArea.vue')
 const CheckBox = () =>  import('@/views/CheckBox.vue')
 const fileupload = () =>  import('@/views/fileupload.vue')
+const SelectBox = () =>  import('@/views/SelectBox.vue')
 
 
 export default [
@@ -106,6 +107,11 @@ export default [
     path: '/fileupload',
     name: 'fileupload',
     component: fileupload
+  },
+   {
+    path: '/SelectBox',
+    name: 'SelectBox',
+    component: SelectBox
   },
  
 ]
