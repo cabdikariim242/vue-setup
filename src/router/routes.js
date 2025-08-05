@@ -1,3 +1,5 @@
+
+
 const layout = () =>  import('@/layout/index.vue')
 const buttons = () =>  import('@/views/buttons.vue')
 const inputGroup = () =>  import('@/views/inputGroup.vue')
@@ -9,6 +11,9 @@ const DatePicker = () =>  import('@/views/DatePicker.vue')
 const ImageZoomView = () =>  import('@/views/ImageZoomView.vue')
 const RegularForm = () =>  import('@/views/RegularForm.vue')
 const Dropdown = () =>  import('@/views/Dropdown.vue')
+const FormView = () =>  import('@/views/FormView.vue')
+const RadioButton = () =>  import('@/views/RadioButton.vue')
+
 
 export default [
   {
@@ -71,6 +76,17 @@ export default [
     path: '/Dropdown',
     name: 'Dropdown',
     component: Dropdown
+  },
+        {
+    path: '/FormView',
+    name: 'FormView',
+    component: FormView
+  },
+  
+        {
+    path: '/RadioButton',
+    name: 'RadioButton',
+    component: RadioButton
   },
  
 ]

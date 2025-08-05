@@ -1,4 +1,4 @@
-.
+
 <template>
   <div class="flex bg-[#edf1f6]">
     <sidebar :isopen="isopen" @toggle-this="toggle" />
