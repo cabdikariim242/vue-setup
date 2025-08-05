@@ -4,7 +4,7 @@
       @mouseenter="hover = true"
       @mouseleave="hover = false"
       :class="[
-        toggle || hover ? 'w-[300px] overflow-y-auto' : 'w-[80px]',
+        toggle || hover ? 'w-[300px]overflow-y-hidden hover:overflow-auto ' : 'w-[80px]',
         'hidden  lg:flex md:flex flex-col bg-[#fefefe] opacity-95  group fixed bottom-3 top-0 left-3 transition-all duration-300 mr-10 mt-5 rounded-lg',
       ]"
       style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6)"
@@ -25,10 +25,10 @@
             ECHO
           </p>
         </div>
-        <div class="mr-2">
+        <div class="mr-2 ml-4">
           <i
             @click="togglesidebar"
-            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#f3f5f8] group-hover:text-[gray]"
+            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#fff] group-hover:text-[gray]"
           ></i>
         </div>
       </div>
@@ -367,7 +367,7 @@
     <!-- halakan waxa ka bilaabanaya mobile sidebar -->
     <div
       v-if="isopen"
-      class="w-[300px] overflow-y-auto flex lg:hidden md:hidden flex-col bg-[#f3f5f8] group fixed bottom-0 top-0 left-0 transition-all duration-300"
+      class="w-[300px] overflow-y-hidden hover:overflow-auto flex lg:hidden md:hidden flex-col bg-[#f3f5f8] group fixed bottom-0 top-0 left-0 transition-all duration-300"
       style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6)"
     >
       <!-- all icons are here -->
