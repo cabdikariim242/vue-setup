@@ -150,8 +150,27 @@
         </div>
       </router-link>
 
+          <router-link 
+        :to="{ name: 'RadioButton' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 mt-5 flex justify-start items-center">
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[20px]"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            RadioButton
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            RadioButton
+          </p>
+        </div>
+      </router-link>
+
           <router-link
-        :to="{ name: 'FormView' }"
+        :to="{ name: 'TextArea' }"
         exact-active-class="dropdown-active"
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
@@ -161,15 +180,79 @@
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
           >
-            FormView
+            TextArea
           </p>
           <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
-            FormView
+            TextArea
+          </p>
+        </div>
+      </router-link>
+
+
+
+          <router-link
+        :to="{ name: 'CheckBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            CheckBox
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            CheckBox
+          </p>
+        </div>
+      </router-link>
+
+
+
+           <router-link
+        :to="{ name: 'fileupload' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            fileupload
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            fileupload
           </p>
         </div>
       </router-link>
 
           
+
+
+
+         <router-link
+        :to="{ name: 'SelectBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            SelectBox
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            SelectBox
+          </p>
+        </div>
+      </router-link>
+
         </div>
       </div>
 
