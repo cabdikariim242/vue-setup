@@ -1,6 +1,6 @@
 
 <template>
-  <div class="flex bg-[#edf1f6]">
+  <div class="flex bg-[#ecf0f5]">
     <sidebar :isopen="isopen" @toggle-this="toggle" />
     <navbar :isopen="isopen" @toggle-this="toggle" />
     <router-view></router-view>
