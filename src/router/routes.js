@@ -13,7 +13,9 @@ const RegularForm = () =>  import('@/views/RegularForm.vue')
 const Dropdown = () =>  import('@/views/Dropdown.vue')
 const FormView = () =>  import('@/views/FormView.vue')
 const RadioButton = () =>  import('@/views/RadioButton.vue')
-const formElements = () =>  import('@/views/formElements.vue')
+const TextArea = () =>  import('@/views/TextArea.vue')
+const CheckBox = () =>  import('@/views/CheckBox.vue')
+const fileupload = () =>  import('@/views/fileupload.vue')
 
 
 export default [
@@ -89,10 +91,21 @@ export default [
     name: 'RadioButton',
     component: RadioButton
   },
+  
    {
-    path: '/formElements',
-    name: 'formElements',
-    component: formElements
+    path: '/TextArea',
+    name: 'TextArea',
+    component: TextArea
+  },
+   {
+    path: '/CheckBox',
+    name: 'CheckBox',
+    component: CheckBox
+  },
+   {
+    path: '/fileupload',
+    name: 'fileupload',
+    component: fileupload
   },
  
 ]
