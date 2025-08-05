@@ -13,6 +13,7 @@ const RegularForm = () =>  import('@/views/RegularForm.vue')
 const Dropdown = () =>  import('@/views/Dropdown.vue')
 const FormView = () =>  import('@/views/FormView.vue')
 const RadioButton = () =>  import('@/views/RadioButton.vue')
+const formElements = () =>  import('@/views/formElements.vue')
 
 
 export default [
@@ -77,7 +78,7 @@ export default [
     name: 'Dropdown',
     component: Dropdown
   },
-        {
+   {
     path: '/FormView',
     name: 'FormView',
     component: FormView
@@ -87,6 +88,11 @@ export default [
     path: '/RadioButton',
     name: 'RadioButton',
     component: RadioButton
+  },
+   {
+    path: '/formElements',
+    name: 'formElements',
+    component: formElements
   },
  
 ]
