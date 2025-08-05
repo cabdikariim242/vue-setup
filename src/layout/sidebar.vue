@@ -25,10 +25,10 @@
             ECHO
           </p>
         </div>
-        <div class="mr-2">
+        <div class="mr-2 ml-4">
           <i
             @click="togglesidebar"
-            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#f3f5f8] group-hover:text-[gray]"
+            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#fff] group-hover:text-[gray]"
           ></i>
         </div>
       </div>

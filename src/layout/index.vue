@@ -14,7 +14,7 @@ export default {
   components: { sidebar, navbar },
   data() {
     return {
-      isopen: true,
+      isopen: false,
     };
   },
   methods: {
