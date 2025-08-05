@@ -17,11 +17,13 @@
           ></i>
           <p
             v-if="!toggle"
-            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px]  font-[500]"
+            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-[500]"
           >
             ECHO
           </p>
-          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px]  font-[500]">ECHO</p>
+          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-[500]">
+            ECHO
+          </p>
         </div>
         <div class="mr-2">
           <i
@@ -106,6 +108,71 @@
         </div>
       </router-link>
 
+      <div class="w-full">
+        <router-link
+        :to="{ name: 'Dropdown' }"
+        class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
+         <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px]"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+          >
+            FORM ELEMENTS
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+            FORM ELEMENTS
+          </p>
+          <i  v-if="!toggle" class="fa-solid fa-chevron-down text-[#465569] group-hover:flex text-[15px] hidden "></i>
+          <i  v-if="toggle" class="fa-solid fa-chevron-down text-[#465569] text-[15px] "></i>
+        </div>
+          
+         </router-link>
+
+
+        <div v-if="showrouter" class="border-2 m-5 mr-2 border-[#e2e8f0]">
+          <router-link 
+        :to="{ name: 'Dropdown' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 m-3 flex justify-start items-center">
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[20px]"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            Dropdown
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            Dropdown
+          </p>
+        </div>
+      </router-link>
+
+          <router-link
+        :to="{ name: 'FormView' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            FormView
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            FormView
+          </p>
+        </div>
+      </router-link>
+
+          
+        </div>
+      </div>
+
       <router-link
         :to="{ name: 'tabs' }"
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
@@ -164,7 +231,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-calendar text-[#4b93b1]"></i>
+          <i class="fa-solid fa-calendar text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -195,13 +262,12 @@
         </div>
       </router-link>
 
-
       <router-link
         :to="{ name: 'RegularForm' }"
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+         <i class="fa-solid fa-square-poll-vertical text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -214,46 +280,10 @@
         </div>
       </router-link>
 
+      
 
-
-       <router-link
-        :to="{ name: 'Dropdown' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
-          <p
-            v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
-          >
-            Dropdown
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
-            Dropdown
-          </p>
-        </div>
-      </router-link>
-
-             <router-link
-        :to="{ name: 'FormView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
-          <p
-            v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
-          >
-            FormView
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
-            FormView
-          </p>
-        </div>
-      </router-link>
+      
     </div>
-
-
 
     <!-- halakan waxa ka bilaabanaya mobile sidebar -->
     <div
@@ -314,6 +344,64 @@
         </div>
       </router-link>
 
+      <div class="w-full">
+        <router-link
+        :to="{ name: 'Dropdown' }"
+        class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
+         <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px]"></i>
+          <p
+           
+            class=" text-[15px] text-[#465569] font-[500]"
+          >
+            FORM ELEMENTS
+          </p>
+          
+          
+          <i class="fa-solid fa-chevron-down text-[#465569] text-[15px] "></i>
+        </div>
+          
+         </router-link>
+
+
+        <div v-if="showrouter" class="border-2 m-5 mr-2 border-[#e2e8f0]">
+          <router-link 
+        :to="{ name: 'Dropdown' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 m-3 flex justify-start items-center">
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[20px]"></i>
+          <p
+            class="text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            Dropdown
+          </p>
+         
+        </div>
+      </router-link>
+
+          <router-link
+        :to="{ name: 'FormView' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            FormView
+          </p>
+          
+        </div>
+      </router-link>
+
+          
+        </div>
+      </div>
+
       <router-link
         :to="{ name: 'tabs' }"
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
@@ -352,14 +440,12 @@
         </div>
       </router-link>
 
-      
-
       <router-link
         :to="{ name: 'ImageZoomView' }"
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">ImageZoomView</p>
         </div>
       </router-link>
@@ -369,29 +455,11 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">RegularForm</p>
         </div>
       </router-link>
 
-            <router-link
-        :to="{ name: 'Dropdown' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">Dropdown</p>
-        </div>
-      </router-link>
-                  <router-link
-        :to="{ name: 'FormView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">formView</p>
-        </div>
-      </router-link>
     </div>
   </div>
 </template>
@@ -404,6 +472,7 @@ export default {
     return {
       toggle: false,
       hover: false,
+      showrouter: false,
     };
   },
 
@@ -419,4 +488,8 @@ export default {
 .router-link-exact-active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
+.dropdown-active .link-text {
+  color: #0f0f0f
+}
+
 </style>

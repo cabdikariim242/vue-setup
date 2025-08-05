@@ -221,7 +221,7 @@
               <Input
                 title="Price"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring-4  border border-gray-300 text-[#4b586c] '"
               />
               <Input
                 title=".00"
@@ -253,7 +253,8 @@
         'transition-colors duration-300',
         isScrollingUp
           ? 'bg-[#e7eaee23] text-white top-[9.5rem]'
-          : 'bg-[#e7eaee23] top-[7rem] transtiton-all duration-300 text-[#929daa]',
+          : 'bg-gray-300 top-[7rem] transtiton-all duration-300 text-[#929daa]',
+          z
       ]"
       class="fixed w-[15rem] mr-5 right-0 h-60 rounded-xl shadow-lg p-3 flex flex-col"
     >
