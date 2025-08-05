@@ -69,7 +69,13 @@
 
         <div class="container-3 flex items-center gap-6">
           <i class="fa-solid fa-grip text-[#d1cccc] text-[18px]"></i>
-          <i class="fa-solid fa-expand text-[#d1cccc] text-[18px]"></i>
+    <button 
+      @click="toggleFullscreen"
+      class="px-4 py-2  text-white rounded  flex items-center gap-2"
+    >
+      <i :class="isFullscreen ? 'fa-solid fa-minimize' : 'fa-solid fa-expand'"></i>
+    
+    </button>
           <i class="fa-solid fa-bell text-[#d1cccc] text-[18px]"></i>
           <!-- Profile avatar -->
           <img
@@ -92,6 +98,7 @@ export default {
   data() {
     return {
       isScrollingUp: true,
+      isFullscreen: false,
       lastScrollY: window.scrollY,
 
     };
@@ -104,6 +111,25 @@ export default {
       this.isScrollingUp = currentScrollY < this.lastScrollY;
       this.lastScrollY = currentScrollY;
     },
+      async toggleFullscreen() {
+      if (!this.isFullscreen) {
+        // Enter fullscreen
+        if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          await document.documentElement.webkitRequestFullscreen();
+        }
+        this.isFullscreen = true;
+      } else {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          await document.webkitExitFullscreen();
+        }
+        this.isFullscreen = false;
+      }
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
