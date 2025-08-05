@@ -8,11 +8,12 @@
     </label>
     <textarea
   :disabled="isDisabled"
+  :class="CustomClass"
       :name="name"
       :placeholder="placeholder"
       v-model="localValue"
       @input="$emit('update:modelValue', localValue)"
-      class="p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:text-black dark:border-gray-600"
+      class=" p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-50 dark:text-black dark:border-gray-600"
     ></textarea>
     <p v-if="helper" class="mt-1 text-xs text-gray-500 dark:text-gray-400">
       {{ helper }}
@@ -30,6 +31,7 @@ export default {
     helper: String,
     isDisabled: Boolean,
     name: String,
+    CustomClass: String,
   },
   computed: {
     localValue: {
