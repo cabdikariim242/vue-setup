@@ -7,7 +7,7 @@
           >
 
         <div class="flex w-full flex-col gap-4 justify-center relative">
-        <label class="text-white" for="date1">Pick Date</label>
+        <label class="text-white dark:text-[#fff]" for="date1">Pick Date</label>
 
         <input
           class="border focus:outline-none focus:ring p-3 py-1 placeholder:text-[#ac9b3d]"
@@ -18,7 +18,7 @@
           readonly
         />
 
-        <div v-if="show1" class="bg-white border rounded mt-2 p-4 z-10">
+        <div v-if="show1" class="bg-white  border rounded mt-2 p-4 z-10">
           <!-- Month + Year Selectors -->
           <div class="flex gap-3 mb-3">
             <select class="p-2 border rounded" v-model="selectedMonth1">
@@ -116,7 +116,7 @@ export default {
       weekDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
 
       // Datepicker 1 state
-      show1: false,
+      show1: true,
       selectedDate1: "",
       selectedMonth1: "January",
       selectedDay1: null,

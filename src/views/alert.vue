@@ -258,7 +258,7 @@
     </BaseCard>
 
     <!-- fivith card -->
-     <BaseCard>
+     <BaseCard >
       <h1 class="font-bold text-xl mb-4">Icon Alerts</h1>
       <hr />
       <div class="inline-block w-full">
@@ -319,13 +319,13 @@
         </p>
       </div>
     </BaseCard>
-     
+    
   </div>
 </template>
 
 <script>
 import alert from "@/components/alert.vue";
-import BaseCard from "@/components/BaseCard.vue";
+import BaseCard from "@/components/BaseCard.vue"; 
 
 export default {
   components: { alert, BaseCard },

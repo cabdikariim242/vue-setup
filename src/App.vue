@@ -1,5 +1,5 @@
 <template>
-  <layout/>
+  <layout class="dark:bg-[#1b1b1b]  "/>
 </template>
 
 <script>

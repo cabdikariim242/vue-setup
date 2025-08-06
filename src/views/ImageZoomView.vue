@@ -3,6 +3,9 @@
     class="flex flex-col w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px]">
     <BaseCard class=" bg-white rounded-2xl shadow-lg">
         <h1 class="text-left text-[18px] mt-4 mb-4 ml-4">Zoom Images</h1>
+    class="flex flex-col  dark:text-white w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px]">
+    <BaseCard class=" bg-white dark:bg-[#0f0f0f] dark:text-white rounded-2xl shadow-lg">
+        <h1 class="text-left text-2xl mt-4 mb-4 ml-4">Zoom Images</h1>
         <hr>
         <h4 class="text-[18px] m-6">Image zoom lets users view pictures in greater detail by hovering or tapping. This feature enhances clarity, highlights fine elements, and improves engagement—ideal for product images, galleries, or art. It ensures a seamless, interactive, and professional viewing experience.</h4>
 
@@ -39,6 +42,8 @@
 
     <BaseCard class=" bg-white rounded-2xl shadow-lg mt-14">
         <h1 class="text-left text-[18] mt-4 mb-4 ml-4">Image Full Screen</h1>
+    <BaseCard class=" bg-white  dark:bg-[#0f0f0f] rounded-2xl shadow-lg mt-14">
+        <h1 class="text-left text-2xl mt-4 mb-4 ml-4">Image Full Screen</h1>
         <hr>
         <h4 class="text-[18px] m-6">Image zoom lets users view pictures in greater detail by hovering or tapping. This feature enhances clarity, highlights fine elements, and improves engagement—ideal for product images, galleries, or art. It ensures a seamless, interactive, and professional viewing experience.</h4>
 

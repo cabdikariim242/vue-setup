@@ -3,8 +3,8 @@
     <div
       class="absolute top-0 left-0 right-0 h-[300px]"
       :class="[
-        'transition-colors duration-300',
-        isScrollingUp ? 'bg-[#1b4b76]' : 'bg-white',
+        'transition-colors duration-300', 
+        isScrollingUp ? 'bg-[#1b4b76]' : 'bg-white dark:bg-[#121212]',
       ]"
     >
       <div
@@ -20,8 +20,13 @@
 
     <div class="flex lg:hidden md:hidden sm:hidden">
         <i @click="$emit('toggle-this', !isopen)" class="fa-solid fa-bars text-[25px] text-white p-[28px]"></i>
-
-        <i class="fa-solid fa-magnifying-glass mt-8 text-white text-[18px]"></i>
+<button 
+      @click="toggleFullscreen"
+      class="px-4 py-2  text-white rounded  flex items-center gap-2"
+    >
+      <i :class="isFullscreen ? 'fa-solid fa-minimize' : 'fa-solid fa-expand'"></i>
+    
+    </button>
 
     </div>
 
@@ -53,7 +58,7 @@
           ></i>
           <!-- Input -->
           <input
-            class="flex-1 bg-transparent outline-none border-none text-white text-[15px] placeholder-white font-serif"
+            class="flex-1 bg-transparent outline-none border-none text-white text-[15px] dark:text-black placeholder-white font-serif"
             type="text"
             placeholder="Quick search..."
           />
@@ -68,10 +73,12 @@
        
 
         <div class="container-3 flex items-center gap-6">
-          <i class="fa-solid fa-grip text-[#d1cccc] text-[18px]"></i>
+          
+    <DarkModeToggle />
+          <!-- <i class="fa-solid fa-grip text-[#d1cccc] text-[18px]"></i> -->
     <button 
       @click="toggleFullscreen"
-      class="px-4 py-2  text-white rounded  flex items-center gap-2"
+      class="px-4 py-2  text-white rounded hidden lg:flex md:flex items-center gap-2"
     >
       <i :class="isFullscreen ? 'fa-solid fa-minimize' : 'fa-solid fa-expand'"></i>
     
@@ -91,10 +98,12 @@
 </template>
 
 <script>
+import DarkModeToggle from "@/components/DarkModeToggle.vue";
 export default {
     props: ['isopen'],
-
-
+    components: {
+      DarkModeToggle
+    },
   data() {
     return {
       isScrollingUp: true,
