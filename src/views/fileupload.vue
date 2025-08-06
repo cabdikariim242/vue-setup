@@ -6,7 +6,7 @@
    <BaseCard>
   <fieldset class="border p-4 mt-8">
   <legend class="text-xl">File Uploader</legend>
-    <div class="p-6 space-y-4">
+    <div class="p-6 space-y-4  dark:text-black">
     <div class="space-y-2 flex flex-col">
     <FileUploader />
   </div>
@@ -15,7 +15,7 @@
   <!-- file upload two -->
      <fieldset class="border p-4 mt-8">
   <legend class="text-xl">File Uploader</legend>
-    <div class="p-6 space-y-4">
+    <div class="p-6 space-y-4 dark:text-black">
     <div class="space-y-2 flex flex-col">
     <FileUploader />
   </div>

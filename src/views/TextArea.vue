@@ -29,7 +29,7 @@
             placeholder="Write something..."
             helper="Enter your thoughts or feedback."
           />
-          <p class="mt-4 text-gray-700 dark:text-gray-900">
+          <p class="mt-4 text-gray-700 dark:text-gray-100">
             Message Show: {{ messageTwo }}
           </p>
         </div>

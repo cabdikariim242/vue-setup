@@ -13,7 +13,7 @@
       I agree to the <a href="#" class="text-blue-600 underline">Terms & Conditions</a>
     </checkBox>
 
-    <p class="mt-4 text-sm text-black">
+    <p class="mt-4 text-sm text-black dark:text-white">
       Status:{{ acceptTerms ? '✔ Checked' : '✖ Not checked' }}
     </p>
   </div>

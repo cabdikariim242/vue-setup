@@ -2,7 +2,7 @@
   <div class="lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px]  mr-[30px] ml-[30px] z-[8]">
 
 
-    <div  class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] mb-20 w-full rounded-lg">
+    <div  class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] mb-20 w-full rounded-lg">
          
          <h1 class="p-2 font-bold">Basic Dropdown</h1>
             <p class="p-2">Dropdown menus are a fundamental user interface component that allows users to choose from a list of options in a collapsible format. This section covers the creation and usage of basic dropdowns in your web applications using the `Menu` component.</p>
@@ -43,7 +43,7 @@
 
        
 
-    <div class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px]">
+    <div class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px]">
         <h1 class="p-2 font-bold">Header & Footer Dropdown</h1>
          <p class="p-2">Dropdown menus often require additional elements such as headers and footers to provide context or additional information. This section covers how to create dropdowns with both headers and footers using the `Menu` component.</p>
           
@@ -95,7 +95,7 @@
 
 
 
-    <div class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px] ">
+    <div class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px] ">
         <h1 class="p-2 font-bold">Icon Dropdown</h1>
          <p class="p-2">Icon dropdowns can add visual cues and improve user experience when selecting options. This section covers how to create dropdowns with icons using the `Menu` component.</p>
      <Dropdown ref="dropdown3" class="p-4">
@@ -136,7 +136,7 @@
 
 
 
-        <div class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px]">
+        <div class="bg-white  dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[30px]">
          <h1 class="p-2 font-bold">Dropdown with Close Button</h1>
          <p class="p-2">Dropdowns with close buttons are a user-friendly way to provide options while allowing users to dismiss the dropdown when needed. This section covers how to create dropdowns with a close button using the `Menu` component.</p>
         <Dropdown ref="filterDropdown" class="p-4">
@@ -197,7 +197,7 @@
 
 
 
-        <div class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[100px]">
+        <div class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[100px]">
          <h1 class="p-2 font-bold">Scrolled Dropdown</h1>
          <p class="p-2">Scrolled dropdowns are useful when you have a long list of options to display in a dropdown menu. By limiting the height of the dropdown and enabling scrolling, you can provide a more compact and user-friendly interface. This section covers how to create scrolled dropdowns using the `Menu` component.</p>
         <Dropdown ref="ScrolledDropdown" class="p-4">
@@ -232,7 +232,7 @@
 
 
 
-      <div class="bg-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[90px]">
+      <div class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[90px]">
         <h1 class="p-2 font-bold">Header & Icon Dropdown</h1>
          <p class="p-2">Header and icon dropdowns are a great way to categorize and visually enhance your dropdown menus. This section covers how to create dropdowns with headers and icons using the `Menu` component.</p>
      <Dropdown ref="HeaderIcon" class="p-4">
