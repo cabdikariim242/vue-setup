@@ -25,10 +25,10 @@
             ECHO
           </p>
         </div>
-        <div class="mr-2">
+        <div class="mr-2 ml-4">
           <i
             @click="togglesidebar"
-            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#f3f5f8] group-hover:text-[gray]"
+            class="fa-solid fa-arrow-right transition-transform duration-5 group-hover:rotate-[180deg] text-[#fff] group-hover:text-[gray]"
           ></i>
         </div>
       </div>
@@ -57,7 +57,7 @@
         class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-gauge-high text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-floppy-disk text-[20px] text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -76,7 +76,7 @@
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i
-            class="fa-duotone fa-solid fa-chart-line text-[20px] text-[#4b93b1]"
+            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1]"
           ></i>
           <p
             v-if="!toggle"
@@ -95,7 +95,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-book-bookmark text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -137,7 +137,7 @@
         class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 m-3 flex justify-start items-center">
-          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[20px]"></i>
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[18px]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
@@ -146,30 +146,109 @@
           </p>
           <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
             Dropdown
+          </p>
+        </div>
+      </router-link>
+
+          <router-link 
+        :to="{ name: 'RadioButton' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 mt-5 flex justify-start items-center">
+          <i class="far fa-circle  text-[#4b93b1] text-[20px]"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            RadioButton
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            RadioButton
           </p>
         </div>
       </router-link>
 
           <router-link
-        :to="{ name: 'FormView' }"
+        :to="{ name: 'TextArea' }"
         exact-active-class="dropdown-active"
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <i class="fa-regular fa-comment text-[20px]  text-[#4b93b1] "></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
           >
-            FormView
+            TextArea
           </p>
           <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
-            FormView
+            TextArea
           </p>
         </div>
       </router-link>
 
-          
+
+
+          <router-link
+        :to="{ name: 'CheckBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="far fa-square text-[20px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            CheckBox
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            CheckBox
+          </p>
+        </div>
+      </router-link>
+
+           <router-link
+        :to="{ name: 'fileupload' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            fileupload
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            fileupload
+          </p>
+        </div>
+      </router-link>
+
+
+
+         <router-link
+        :to="{ name: 'SelectBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] "></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+          >
+            SelectBox
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+            SelectBox
+          </p>
+        </div>
+      </router-link>
+
         </div>
       </div>
 
@@ -178,7 +257,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-file text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -196,7 +275,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-brands fa-slack text-[#4b93b1]"></i>
+          <i class="fa-solid fa-chevron-down text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -249,7 +328,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -267,7 +346,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-solid fa-square-poll-vertical text-[#4b93b1]"></i>
+         <i class="fa-regular fa-clipboard text-[#4b93b1]"></i>
           <p
             v-if="!toggle"
             class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
@@ -317,7 +396,7 @@
         class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-gauge-high text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-floppy-disk text-[18px] text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">BUTTONS</p>
         </div>
       </router-link>
@@ -328,7 +407,7 @@
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i
-            class="fa-duotone fa-solid fa-chart-line text-[20px] text-[#4b93b1]"
+            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1]"
           ></i>
           <p class="text-[15px] text-[#465569] font-[500]">INPUTGROUPS</p>
         </div>
@@ -339,7 +418,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-book-bookmark text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">ALERT</p>
         </div>
       </router-link>
@@ -365,38 +444,115 @@
 
 
         <div v-if="showrouter" class="border-2 m-5 mr-2 border-[#e2e8f0]">
-          <router-link 
+            <router-link
         :to="{ name: 'Dropdown' }"
-        exact-active-class="dropdown-active"
-        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
-      >
-        <div class=" gap-3 m-3 flex justify-start items-center">
-          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[20px]"></i>
-          <p
-            class="text-[15px]  text-[#465569] font-[500] link-text "
-          >
-            Dropdown
-          </p>
-         
-        </div>
-      </router-link>
-
-          <router-link
-        :to="{ name: 'FormView' }"
         exact-active-class="dropdown-active"
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-brands fa-brave-reverse text-[24px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-circle-down text-[18px]  text-[#4b93b1] "></i>
           <p
             
             class=" text-[15px]  text-[#465569] font-[500] link-text "
           >
-            FormView
+            Dropdown
           </p>
           
         </div>
       </router-link>
+
+          <router-link
+        :to="{ name: 'RadioButton' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="far fa-circle text-[18px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            RadioButton
+          </p>
+          
+        </div>
+      </router-link>
+
+        <router-link
+        :to="{ name: 'TextArea' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-regular fa-comment text-[18px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            TextArea
+          </p>
+          
+        </div>
+      </router-link>
+
+
+
+        <router-link
+        :to="{ name: 'CheckBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="far fa-square text-[18px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            CheckBox
+          </p>
+          
+        </div>
+      </router-link>
+
+
+        <router-link
+        :to="{ name: 'fileupload' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            fileupload
+          </p>
+          
+        </div>
+      </router-link>
+
+
+
+        <router-link
+        :to="{ name: 'SelectBox' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-solid fa-chevron-down text-[18px]  text-[#4b93b1] "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text "
+          >
+            SelectBox
+          </p>
+          
+        </div>
+      </router-link>
+
+
+
 
           
         </div>
@@ -407,7 +563,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-file text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">TABS</p>
         </div>
       </router-link>
@@ -426,7 +582,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-brands fa-slack text-[#4b93b1]"></i>
+          <i class="fa-solid fa-chevron-down text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">Accordion</p>
         </div>
       </router-link>
@@ -445,7 +601,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">ImageZoomView</p>
         </div>
       </router-link>
@@ -455,7 +611,7 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass text-[#4b93b1]"></i>
+          <i class="fa-regular fa-clipboard text-[#4b93b1]"></i>
           <p class="text-[15px] text-[#465569] font-[500]">RegularForm</p>
         </div>
       </router-link>

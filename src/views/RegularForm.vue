@@ -1,12 +1,15 @@
 <template>
   <div
-    class="flex gap-5 w-full lg:mt-[100px] md:mt-[102px] mt-[150px] lg:ml-[125px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]"
+    class="flex gap-5 w-full flex-col lg:mt-[100px] md:mt-[102px] mt-[150px] lg:ml-[125px] md:ml-[150px] mr-[20px] ml-[20px] z-[8]"
   >
-    <div class="mr-60">
+  <div>
+    <h1 class="text-white  font-bold mt-[-45px] text-start ">Regular Form</h1>
+  </div>
+    <div class="lg:mr-60 md:mr-60 mr-2 lg:mt-[0px] md:mt-[0px] mt-[200px]">
       <!-- first div /card -->
       <div class="w-full rounded-xl">
-        <h1>
-          <strong class="text-white">Regular Form</strong>
+        <h1 class="hidden lg:flex md:flex"> 
+          <strong class="text-white mr-2">Regular Form</strong>
           <span class="text-[rgba(255,255,255,.8)]">
             • Unlock the potential of our Form component for creating
             user-friendly and interactive web forms effortlessly.
@@ -37,7 +40,7 @@
               <Input
                 title="Input text"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3 rounded pl-1 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3 rounded pl-1 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
             <!-- second input  -->
@@ -51,7 +54,7 @@
               <Input
                 title="Rounded"
                 type="text"
-                :customClass="'w-full pl-3 rounded-3xl py-1  mt-2 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 rounded-3xl py-1  mt-2 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
             <!-- third input -->
@@ -65,7 +68,7 @@
               <Input
                 title="With Help"
                 type="text"
-                :customClass="'w-full pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
               <p class="text-[14px] text-[#476569] mb-3">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -83,7 +86,7 @@
               <Input
                 title="Password"
                 type="Password"
-                :customClass="'w-full pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
             <!-- fivth input -->
@@ -98,7 +101,7 @@
                 :disabled="true"
                 title="Disabled"
                 type="text"
-                :customClass="'w-full cursor-not-allowed pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] bg-[#f1f5f9]'"
+                :customClass="'w-full cursor-not-allowed pl-3 p-1 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] bg-[#f1f5f9]'"
               />
             </div>
           </div>
@@ -133,7 +136,7 @@
               <Input
                 title=".form-control-lg"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3 text-[20px] font-[500] rounded pl-2  focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3 text-[20px] font-[500] rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
             <!-- second input  -->
@@ -141,7 +144,7 @@
               <Input
                 title="Default Input "
                 type="text"
-                :customClass="'w-full pl-3 py-1  mt-2 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 py-1  mt-2 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
             <!-- third input -->
@@ -149,7 +152,7 @@
               <Input
                 title=".form-control-sm"
                 type="text"
-                :customClass="'w-full pl-3 text-[14px] p-1 rounded pl-1 my-3 focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 text-[14px] p-1 rounded pl-1 my-3 focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
           </div>
@@ -183,7 +186,6 @@
           <div class="border border-gray-300 rounded-md p-3 mt-4">
             <!-- first input -->
             <div class="flex items-center">
-              
               <Input
                 title="@"
                 :disabled="true"
@@ -193,15 +195,15 @@
               <Input
                 title=".form-control-lg"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
             </div>
-             <!-- second input  -->
+            <!-- second input  -->
             <div class="flex items-center">
               <Input
                 title="Price"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200 border border-gray-300 text-[#4b586c] '"
               />
               <Input
                 title=".00"
@@ -221,7 +223,7 @@
               <Input
                 title="Price"
                 type="text"
-                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring-4  border border-gray-300 text-[#4b586c] '"
+                :customClass="'w-full pl-3 p-1 my-3  font-[500] rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200-4  border border-gray-300 text-[#4b586c] '"
               />
               <Input
                 title=".00"
@@ -230,9 +232,6 @@
                 :customClass="'w-10 h-[34px] ml-[-1px] text-center  font-bold border border-gray-300 bg-[#f1f5f9] '"
               />
             </div>
-           
-            
-            
           </div>
           <p class="text-[14px] text-[#476569] mt-3">
             Input groups are a versatile tool for enhancing the usability and
@@ -244,23 +243,121 @@
           </p>
         </BaseCard>
       </div>
+      <!-- forth div /card -->
+
+      <div class="w-full rounded-xl">
+        <BaseCard id="four">
+          <h1
+            class="pb-4 mb-4 font-bold text-[#476569] border-b border-gray-500 border-dashed"
+          >
+            Input State
+          </h1>
+          <p class="text-[#476569] mb-4">
+            Input states provide visual feedback to users about the status or
+            validity of form inputs. This section covers how to apply different
+            states to form inputs using CSS classes and provides examples of
+            various input states.
+          </p>
+          <p class="text-[#64748b]">Example code / preview</p>
+          <div class="border border-gray-300 rounded-md p-3 mt-4">
+            <!-- first input -->
+            <div class="flex flex-col">
+              <Label
+                label="Input Success"
+                :labelClass="'text-[#95989B] font-[500]'"
+                id="text"
+                :required="false"
+              />
+
+              <Input
+                title="Input text"
+                type="text"
+                :customClass="'w-full pl-3 p-1 my-3  rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200 border border-[#0d9488] text-[#798392] '"
+              />
+
+              <div class="flex bg-[#f1f5f9] w-full h-1 gap-10">
+                <div class="h-full w-full max-w-56 bg-[#33b9ae]"></div>
+                <div class="h-full w-full max-w-56 bg-[#33b9ae]"></div>
+                <div class="h-full w-full max-w-56 bg-[#33b9ae]"></div>
+              </div>
+              <p class="text-[16px] font-[480] text-[#58b5ad]">
+                Strong Password
+              </p>
+            </div>
+            <!-- second input  -->
+            <div class="flex flex-col">
+              <Label
+                label="Input Warning"
+                :labelClass="'text-[#95989B] mt-3'"
+                id="text"
+                :required="false"
+              />
+
+              <Input
+                title="Input text"
+                type="text"
+                :customClass="'w-full pl-3 p-1 my-3  rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200-4 focus:ring-4 focus:ring-blue-200-blue-200 border border-[#ca8a04] text-[#798392] '"
+              />
+              <p class="text-[16px] font-[480] text-[#d29b29]">
+                Attempting to reconnect to server...
+              </p>
+            </div>
+            <!-- third input -->
+            <div class="flex flex-col">
+              <Label
+                label="Input Error"
+                :labelClass="'text-[#95989B] mt-3'"
+                id="text"
+                :required="false"
+              />
+
+              <Input
+                title="Input text"
+                type="text"
+                :customClass="'w-full pl-3 p-1 my-3  rounded pl-2  focus:outline-none focus:ring-4 focus:ring-blue-200-4 focus:ring-4 focus:ring-blue-200-blue-200 border border-[#b91c1c] text-[#798392] '"
+              />
+              <p class="text-[16px] font-[480] text-[#b91c1c]">
+                This field is required
+              </p>
+            </div>
+          </div>
+          <p class="text-[14px] text-[#476569] mt-3">
+            Input states are crucial for providing feedback to users and
+            enhancing the user experience in your forms. By applying the
+            appropriate state classes, you can visually communicate the status
+            of each input field, making it easier for users to understand and
+            interact with your forms. Experiment with different styles and
+            states to match the design and functionality of your web
+            application.
+          </p>
+        </BaseCard>
+      </div>
     </div>
 
     <!-- second card -->
-
+    
     <div
       :class="[
         'transition-colors duration-300',
         isScrollingUp
           ? 'bg-[#e7eaee23] text-white top-[9.5rem]'
           : 'bg-gray-300 top-[7rem] transtiton-all duration-300 text-[#929daa]',
-          z
       ]"
-      class="fixed w-[15rem] mr-5 right-0 h-60 rounded-xl shadow-lg p-3 flex flex-col"
+      class="lg:fixed md:fixed absolute  left-0 right-0 lg:ml-[69rem] md:ml-[20rem] sm:ml-[10rem] ml-4 mr-5 rounded-xl 
+      shadow-lg border border-[#e7eaee23] p-3 flex flex-col"
     >
-      <a href="#one" class="px-3 font-bold text-[16px]">input</a>
-      <a href="#two" class="p-3 font-bold text-[16px]">input Sizing</a>
-      <a href="#three" class="p-3 font-bold text-[16px]">Input Groups</a>
+      <a href="#one" class="px-3 font-[400] text-[16px] focus:border-l"
+        >input</a
+      >
+      <a class="px-3 py-3 font-[400] text-[16px] focus:border-l" href="#two"
+        >input Sizing</a
+      >
+      <a class="px-3 py-3 font-[400] text-[16px] focus:border-l" href="#three"
+        >Input Groups</a
+      >
+      <a class="px-3 py-3 font-[400] text-[16px] focus:border-l" href="#four"
+        >IInput State</a
+      >
     </div>
   </div>
   <input-comp />
