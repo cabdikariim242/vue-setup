@@ -116,12 +116,14 @@
     </template>
 
     <script>  
-    import inputWrapper  from '@/components/inputWrapper.vue'
+    import Input  from '@/components/input-comp.vue'
+    import Label from '@/components/labelComp.vue'
+    import BaseCard from '@/components/BaseCard.vue'
 
 
     export default {
       components:
-      {inputWrapper},
+      {Input, Label, BaseCard},
       data(){
         return{
         customClass:'',
