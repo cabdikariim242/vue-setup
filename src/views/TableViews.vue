@@ -62,7 +62,7 @@
           v-else
           class="table-auto w-full border bg-black border-gray-300 rounded-lg shadow-md"
         >
-          <thead class="bg-gray-500 text-white">
+          <thead class="bg-gray-800 text-white">
             <tr>
               <th class="lg:px-4 md:px-2 sm:px-1 px-[5px] py-2">Full Name</th>
               <th
@@ -101,8 +101,8 @@
                 <span
                   :class="
                     member.status === 'joogo'
-                      ? 'bg-green-600 font-semibold lg:px-2 md:px-1 px-[5px] py-1 rounded-lg text-white'
-                      : 'bg-red-600 font-semibold lg:px-2 md:px-1 px-[5px] py-1 rounded-lg text-white'
+                      ? 'text-green-600 font-semibold lg:px-2 md:px-1 px-[5px] py-1 rounded-lg '
+                      : 'text-red-600 font-semibold lg:px-2 md:px-1 px-[5px] py-1 rounded-lg '
                   "
                 >
                   {{ member.status }}
@@ -150,10 +150,8 @@
 </template>
 
 <script>
-import BaseCard from "@/components/BaseCard.vue";
 
 export default {
-  components: { BaseCard },
 
   data() {
     return {
