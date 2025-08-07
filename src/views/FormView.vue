@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]">
+    <div class="lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]">
       <p class="text-white mr-[80px] lg:flex md:hidden hidden"><strong>Text Area </strong>  . Explore the versatility of our Form Elements component for enhancing user interactions on your application.
 </p>
 <!-- start text area -->

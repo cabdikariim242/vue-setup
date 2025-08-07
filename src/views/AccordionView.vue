@@ -1,5 +1,5 @@
 <template>
-   <div class="z-[8]  mt-[200px] lg:ml-[130px] md:ml-[130px] ml-[10px] lg:mr-[80px] md:mr-[50px] mr-[30px] ">
+   <div class="w-full z-[8]  mt-[200px] lg:ml-[130px] md:ml-[130px] ml-[10px] lg:mr-[80px] md:mr-[50px] mr-[30px] 2xl:ml-[360px]  2xl:mr-[270px]">
       <p class="text-white mr-[80px] lg:flex md:hidden hidden"><strong>Accordion</strong>   .  Explore our accordion component, effortless content organization and presentation!</p>
 
      <BaseCard>
