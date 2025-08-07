@@ -115,29 +115,29 @@
 
     </template>
 
-<script>
-import Label from '@/components/labelComp.vue'
-import Input from '@/components/input-comp.vue'
-import BaseCard from '@/components/BaseCard.vue'
+    <script>  
+    import Input  from '@/components/input-comp.vue'
+    import Label from '@/components/labelComp.vue'
+    import BaseCard from '@/components/BaseCard.vue'
 
 
-export default {
-  components:
-    { BaseCard, Input, Label },
-  data() {
-    return {
-      customClass: '',
-      Name: '',
-      SecondName: '',
-      password: '',
-      email: '',
-      title: '',
-      modelValue: '',
-      type: null,
-      labelClass: '',
-      id: '',
-      required: true,
-      label: ''
+    export default {
+      components:
+      {Input, Label, BaseCard},
+      data(){
+        return{
+        customClass:'',
+        Name:'',
+        SecondName:'',
+        password:'',
+        email:'',
+        title: '',
+        modelValue: '',
+        type: null,
+        labelClass:'',
+        id:'',
+        required:true,
+        label:''
 
 
     }
