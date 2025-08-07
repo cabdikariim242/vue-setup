@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8]">
+  <div class=" w-full flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]">
     
     <!-- Datepicker 1 -->
-          <div class="bg-green-900 shadow-lg rounded-lg p-4 w-[500px]"
+          <div class="bg-green-900 shadow-lg rounded-lg p-4 w-full"
            :class="show1 ? 'h-[440px]' : 'h-[120px]'"
           >
 
@@ -50,7 +50,7 @@
     </div>
 
     <!-- Datepicker 2 -->
-     <div class="bg-blue-900 shadow-lg rounded-lg p-4 w-[500px]"
+     <div class="bg-blue-900 shadow-lg rounded-lg p-4 w-full"
       :class="show2 ? 'h-[440px]' : 'h-[120px]'"
      >
 
@@ -116,7 +116,7 @@ export default {
       weekDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
 
       // Datepicker 1 state
-      show1: true,
+      show1: false,
       selectedDate1: "",
       selectedMonth1: "January",
       selectedDay1: null,

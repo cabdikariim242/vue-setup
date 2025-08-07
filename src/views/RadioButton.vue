@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]"
+    class="lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]"
   >
     <div
       class="bg-white dark:bg-[#0f0f0f] dark:text-white shadow-[0_8px_10px_rgba(0,0,0,0.8)] w-full rounded-lg mt-[90px]"

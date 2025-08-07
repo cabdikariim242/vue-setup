@@ -1,6 +1,6 @@
 <template>
       <div
-    class="flex flex-col w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px]">
+    class="flex flex-col w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px] 2xl:ml-[360px]  2xl:mr-[270px]">
     <BaseCard class=" bg-white rounded-2xl shadow-lg">
         <h1 class="text-left text-[18px] mt-4 mb-4 ml-4">Zoom Images</h1>
         <hr>
