@@ -6,14 +6,14 @@
       <h1 class="font-bold text-xl mb-4">Basic Alerts</h1>
       <hr />
       <div class="inline-block w-full">
-        <p class="text-[#475569] text-[14px]">
+        <p class="text-[#475569] text-[14px] dark:text-white">
           Alerts are essential for communicating important messages, warnings,
           or updates to users. In this section, you'll learn how to use basic
           alerts effectively to provide information and enhance the user
           experience.
         </p>
 
-        <p class="mt-5 text-[#475569] mb-4">Example code / preview</p>
+        <p class="mt-5 text-[#475569] mb-4 dark:text-white">Example code / preview</p>
 
         <div class="border-2 px-2 border-dotted py-2">
           <alert
@@ -41,7 +41,7 @@
             :customClass="'smooth alert bg-[#1e293b] text-[#ffff] p-4 rounded-xl  w-full'"
           />
         </div>
-        <p class="mt-4 text-[#475569] text-[14px]">
+        <p class="mt-4 text-[#475569] text-[14px] dark:text-white">
           Basic alerts are a fundamental element of user interface design,
           serving as a means to communicate important messages clearly and
           effectively. Whether you're building a website or an application,
@@ -56,13 +56,13 @@
       <h1 class="font-bold text-xl mb-4">Icon Alerts</h1>
       <hr />
       <div class="inline-block w-full">
-        <p class="text-[#475569] text-[14px]">
+        <p class="text-[#475569] text-[14px] dark:text-white">
           Icon alerts combine informative messages with easily recognizable
           icons to convey important information to users effectively. This
           section will guide you on how to use icon alerts in your project.
         </p>
 
-        <p class="mt-5 text-[#475569] mb-4">Example code / preview</p>
+        <p class="mt-5 text-[#475569] mb-4 dark:text-white">Example code / preview</p>
 
         <div class="border-2 px-2 border-dotted py-2">
           <alert
@@ -96,7 +96,7 @@
             :customClass="'smooth alert bg-[#1e293b] flex gap-2 items-center text-[#ffff] p-4 rounded-xl  w-full'"
           />
         </div>
-        <p class="mt-4 text-[#475569] text-[14px]">
+        <p class="mt-4 text-[#475569] text-[14px] dark:text-white">
           Icon alerts are a valuable tool for enhancing user interaction by
           providing clear and visually appealing messages. By following the
           steps above, you can easily integrate icon alerts into your project
@@ -111,14 +111,14 @@
       <h1 class="font-bold text-xl mb-4">Additional Content Alerts</h1>
       <hr />
       <div class="inline-block w-full">
-        <p class="text-[#475569] text-[14px]">
+        <p class="text-[#475569] text-[14px] dark:text-white">
           Additional content alerts allow you to convey more information to
           users by including extra elements within the alert, such as icons,
           labels, or additional text. This section provides guidance on how to
           use additional content alerts effectively.
         </p>
 
-        <p class="mt-5 text-[#475569] mb-4">Example code / preview</p>
+        <p class="mt-5 text-[#475569] mb-4 dark:text-white">Example code / preview</p>
 
         <div class="border-2 px-2 border-dotted py-2">
           <alert
@@ -167,7 +167,7 @@
             :spanClass="'text-[#0f107a] '"
           />
         </div>
-        <p class="mt-4 text-[#475569] text-[14px]">
+        <p class="mt-4 text-[#475569] text-[14px] dark:text-white">
           Additional content alerts are a valuable tool for delivering richer
           information to users while maintaining a clean and organized design.
           By following the steps above, you can easily integrate additional
@@ -183,13 +183,13 @@
       <h1 class="font-bold text-xl mb-4">Icon Alerts</h1>
       <hr />
       <div class="inline-block w-full">
-        <p class="text-[#475569] text-[14px]">
+        <p class="text-[#475569] text-[14px] dark:text-white">
           Icon alerts combine informative messages with easily recognizable
           icons to convey important information to users effectively. This
           section will guide you on how to use icon alerts in your project.
         </p>
 
-        <p class="mt-5 text-[#475569] mb-4">Example code / preview</p>
+        <p class="mt-5 text-[#475569] mb-4 dark:text-white">Example code / preview</p>
 
         <div class="border-2 px-2 border-dotted py-2">
           
@@ -248,7 +248,7 @@
             :customClass="'smooth alert border-[#0d9488] border-2 flex gap-2 items-center text-[#0d9488] p-4 rounded-xl  w-full'"
           />
         </div>
-        <p class="mt-4 text-[#475569] text-[14px]">
+        <p class="mt-4 text-[#475569] text-[14px] dark:text-white">
           Icon alerts are a valuable tool for enhancing user interaction by
           providing clear and visually appealing messages. By following the
           steps above, you can easily integrate icon alerts into your project
@@ -262,13 +262,13 @@
       <h1 class="font-bold text-xl mb-4">Icon Alerts</h1>
       <hr />
       <div class="inline-block w-full">
-        <p class="text-[#475569] text-[14px]">
+        <p class="text-[#475569] text-[14px] dark:text-white">
           Icon alerts combine informative messages with easily recognizable
           icons to convey important information to users effectively. This
           section will guide you on how to use icon alerts in your project.
         </p>
 
-        <p class="mt-5 text-[#475569] mb-4">Example code / preview</p>
+        <p class="mt-5 text-[#475569] mb-4 dark:text-white">Example code / preview</p>
 
         <div class="border-2 px-2 border-dotted py-2">
           <alert
@@ -311,7 +311,7 @@
             :customClass="'smooth alert bg-[#da8686] flex gap-2 items-center text-[#4c5563] p-4 rounded-xl  w-full'"
           />
         </div>
-        <p class="mt-4 text-[#475569] text-[14px]">
+        <p class="mt-4 text-[#475569] text-[14px] dark:text-white">
           Icon alerts are a valuable tool for enhancing user interaction by
           providing clear and visually appealing messages. By following the
           steps above, you can easily integrate icon alerts into your project

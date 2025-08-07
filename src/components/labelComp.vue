@@ -1,5 +1,5 @@
 <template>
-    <label :class="labelClass" :for="id" >
+    <label :class="labelClass" :for="id" class="dark:text-white">
         {{ label }}
         <span v-if="required">**</span>
     <slot></slot>

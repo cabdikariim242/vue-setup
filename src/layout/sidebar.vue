@@ -17,11 +17,11 @@
           ></i>
           <p
             v-if="!toggle"
-            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-[500]"
+            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-[500] dark:text-white"
           >
             ECHO
           </p>
-          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-[500]">
+          <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-[500] dark:text-white">
             ECHO
           </p>
         </div>
@@ -57,14 +57,14 @@
         class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-floppy-disk text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-floppy-disk text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             BUTTONS
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             BUTTONS
           </p>
         </div>
@@ -76,15 +76,15 @@
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i
-            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1]"
+            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"
           ></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             INPUTGROUPS
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             INPUTGROUPS
           </p>
         </div>
@@ -95,14 +95,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             ALERT
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             ALERT
           </p>
         </div>
@@ -113,18 +113,18 @@
         :to="{ name: 'Dropdown' }"
         class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
          <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px]"></i>
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             FORM ELEMENTS
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             FORM ELEMENTS
           </p>
-          <i  v-if="!toggle" class="fa-solid fa-chevron-down text-[#465569] group-hover:flex text-[15px] hidden "></i>
-          <i  v-if="toggle" class="fa-solid fa-chevron-down text-[#465569] text-[15px] "></i>
+          <i  v-if="!toggle" class="fa-solid fa-chevron-down text-[#465569] group-hover:flex text-[15px] hidden  dark:text-white"></i>
+          <i  v-if="toggle" class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white"></i>
         </div>
           
          </router-link>
@@ -137,14 +137,14 @@
         class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 m-3 flex justify-start items-center">
-          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[18px]"></i>
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[18px] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white "
           >
             Dropdown
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
             Dropdown
           </p>
         </div>
@@ -156,14 +156,14 @@
         class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 mt-5 flex justify-start items-center">
-          <i class="far fa-circle  text-[#4b93b1] text-[20px]"></i>
+          <i class="far fa-circle  text-[#4b93b1] text-[20px] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text  dark:text-white"
           >
             RadioButton
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
             RadioButton
           </p>
         </div>
@@ -175,14 +175,14 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-regular fa-comment text-[20px]  text-[#4b93b1] "></i>
+          <i class="fa-regular fa-comment text-[20px]  text-[#4b93b1] dark:text-white "></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white "
           >
             TextArea
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
             TextArea
           </p>
         </div>
@@ -196,14 +196,14 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="far fa-square text-[20px]  text-[#4b93b1] "></i>
+          <i class="far fa-square text-[20px]  text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white "
           >
             CheckBox
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
             CheckBox
           </p>
         </div>
@@ -215,14 +215,14 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white "
           >
             fileupload
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
             fileupload
           </p>
         </div>
@@ -236,14 +236,14 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text "
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white"
           >
             SelectBox
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text ">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
             SelectBox
           </p>
         </div>
@@ -257,14 +257,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1]"></i>
+          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             TABS
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             TABS
           </p>
         </div>
@@ -275,14 +275,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-chevron-down text-[#4b93b1]"></i>
+          <i class="fa-solid fa-chevron-down text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             Accordion
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             Accordion
           </p>
         </div>
@@ -292,14 +292,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-table text-[#4b93b1]"></i>
+          <i class="fa-solid fa-table text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             TableViews
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             TableViews
           </p>
         </div>
@@ -310,14 +310,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-calendar text-[#4b93b1]"></i>
+          <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             DatePicker
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             DatePicker
           </p>
         </div>
@@ -328,14 +328,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1]"></i>
+          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             ImageZoomView
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             ImageZoomView
           </p>
         </div>
@@ -346,14 +346,14 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-         <i class="fa-regular fa-clipboard text-[#4b93b1]"></i>
+         <i class="fa-regular fa-clipboard text-[#4b93b1] dark:text-white"></i>
           <p
             v-if="!toggle"
-            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500]"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
           >
             RegularForm
           </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500]">
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
             RegularForm
           </p>
         </div>
@@ -376,7 +376,7 @@
           <i
             class="fa-brands fa-stackpath text-[#206c93] text-[35px] pl-6 pr-3 pt-3 text-5 rounded-full"
           ></i>
-          <p class="mt-5 text-[#465569] font-[500] ml-[20px]">ECHO</p>
+          <p class="mt-5 text-[#465569] font-[500] ml-[20px] dark:text-white">ECHO</p>
         </div>
         <div class="mr-2">
           <i
@@ -396,8 +396,8 @@
         class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-floppy-disk text-[18px] text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">BUTTONS</p>
+          <i class="fa-solid fa-floppy-disk text-[18px] text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">BUTTONS</p>
         </div>
       </router-link>
 
@@ -407,9 +407,9 @@
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i
-            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1]"
+            class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"
           ></i>
-          <p class="text-[15px] text-[#465569] font-[500]">INPUTGROUPS</p>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">INPUTGROUPS</p>
         </div>
       </router-link>
 
@@ -418,8 +418,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">ALERT</p>
+          <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">ALERT</p>
         </div>
       </router-link>
 
@@ -428,16 +428,16 @@
         :to="{ name: 'Dropdown' }"
         class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
          <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px]"></i>
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
           <p
            
-            class=" text-[15px] text-[#465569] font-[500]"
+            class=" text-[15px] text-[#465569] font-[500] dark:text-white"
           >
             FORM ELEMENTS
           </p>
           
           
-          <i class="fa-solid fa-chevron-down text-[#465569] text-[15px] "></i>
+          <i class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white "></i>
         </div>
           
          </router-link>
@@ -450,10 +450,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-solid fa-circle-down text-[18px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-circle-down text-[18px]  text-[#4b93b1] dark:text-white "></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white"
           >
             Dropdown
           </p>
@@ -467,10 +467,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="far fa-circle text-[18px]  text-[#4b93b1] "></i>
+          <i class="far fa-circle text-[18px]  text-[#4b93b1] dark:text-white "></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text  dark:text-white"
           >
             RadioButton
           </p>
@@ -484,10 +484,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-regular fa-comment text-[18px]  text-[#4b93b1] "></i>
+          <i class="fa-regular fa-comment text-[18px]  text-[#4b93b1] dark:text-white "></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white "
           >
             TextArea
           </p>
@@ -503,10 +503,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="far fa-square text-[18px]  text-[#4b93b1] "></i>
+          <i class="far fa-square text-[18px]  text-[#4b93b1] dark:text-white "></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white "
           >
             CheckBox
           </p>
@@ -521,10 +521,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] dark:text-white "></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white "
           >
             fileupload
           </p>
@@ -540,10 +540,10 @@
         class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class=" gap-3 mx-3 flex justify-start items-center">
-          <i class="fa-solid fa-chevron-down text-[18px]  text-[#4b93b1] "></i>
+          <i class="fa-solid fa-chevron-down text-[18px]  text-[#4b93b1] dark:text-white"></i>
           <p
             
-            class=" text-[15px]  text-[#465569] font-[500] link-text "
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white"
           >
             SelectBox
           </p>
@@ -563,8 +563,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">TABS</p>
+          <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">TABS</p>
         </div>
       </router-link>
       <router-link
@@ -572,8 +572,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-table text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">Table</p>
+          <i class="fa-solid fa-table text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">Table</p>
         </div>
       </router-link>
 
@@ -582,8 +582,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-chevron-down text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">Accordion</p>
+          <i class="fa-solid fa-chevron-down text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">Accordion</p>
         </div>
       </router-link>
       <router-link
@@ -591,8 +591,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-calendar text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">DatePicker</p>
+          <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">DatePicker</p>
         </div>
       </router-link>
 
@@ -601,8 +601,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">ImageZoomView</p>
+          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">ImageZoomView</p>
         </div>
       </router-link>
 
@@ -611,8 +611,8 @@
         class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]"
       >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-regular fa-clipboard text-[#4b93b1]"></i>
-          <p class="text-[15px] text-[#465569] font-[500]">RegularForm</p>
+          <i class="fa-regular fa-clipboard text-[#4b93b1] dark:text-white"></i>
+          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">RegularForm</p>
         </div>
       </router-link>
 

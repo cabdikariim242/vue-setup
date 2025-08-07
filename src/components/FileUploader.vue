@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-md mx-auto mt-10 p-6 bg-white  rounded-xl shadow">
-    <h2 class="text-lg font-bold mb-4 dark:text-white">Upload File (.jpg, .png, .pdf)</h2>
+    <h2 class="text-lg font-bold mb-4 dark:text-black">Upload File (.jpg, .png, .pdf)</h2>
 
     <input
       type="file"
@@ -14,7 +14,7 @@
         hover:file:bg-blue-100 file:cursor-pointer dark:file:bg-[#0f0f0f]"
     />
 
-    <div v-if="file" class="mt-4 space-y-2 dark:text-white  ">
+    <div v-if="file" class="mt-4 space-y-2 dark:text-black  ">
       <p><strong>Name:</strong> {{ file.name }}</p>
       <p><strong>Type:</strong> {{ file.type }}</p>
       <p><strong>Size:</strong> {{ (file.size / 1024).toFixed(2) }} KB</p>

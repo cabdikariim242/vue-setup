@@ -12,7 +12,7 @@
             type="text"
             v-model="searchText"
             placeholder="Search by name, gender, status, age, or date"
-            class="w-full md:w-[400px] px-4 py-2 border border-gray-300 bg-gray-600 text-white dark:text-black placeholder:text-white dark:placeholder:text-black rounded-lg focus:outline-none focus:ring focus:border-blue-400"
+            class="w-full md:w-[400px] px-4 py-2 border border-gray-300 bg-gray-600 text-white dark:text-white placeholder:text-white dark:placeholder:text-white rounded-lg focus:outline-none focus:ring focus:border-blue-400"
           />
 
           <div class="flex items-center gap-4">
