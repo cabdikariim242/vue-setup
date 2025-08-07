@@ -1,6 +1,6 @@
 <template>
 
-      <div class="z-[8] space-y-10  mt-[140px] lg:ml-[130px] md:ml-[130px] ml-[10px] lg:mr-[100px] md:mr-[100px] mr-[10px]">
+      <div class="z-[8] space-y-10  mt-[140px] lg:ml-[130px] md:ml-[130px] ml-[10px] lg:mr-[100px] md:mr-[100px] mr-[10px] 2xl:ml-[360px]  2xl:mr-[270px]">
       <h1 class="text-2xl font-semibold text-white mb-4">Basic Tabs</h1>
     
 

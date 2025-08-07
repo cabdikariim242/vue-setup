@@ -1,5 +1,7 @@
 <template>
-  <layout class="dark:bg-[#1b1b1b]  "/>
+  <div class="bg-blue-500 dark:bg-[#1b1b1b]">
+  <layout />
+  </div>
 </template>
 
 <script>

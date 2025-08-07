@@ -10,14 +10,24 @@
     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Tailwis Vue</title>
+  <!-- <style>
+body.dark {
+  background-color: #0000; /* or transparent */
+}
+
+body {
+  background-color: #ecf0f5;
+}
+
+  </style> -->
 </head>
 
-<body>
+<body class="bg-[#ecf0f5] dark:bg-[#1b1b1b]">
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
-  <div id="app"></div>
+  <div id="app" class="bg-blue-300"></div>
   <!-- built files will be auto injected -->
 </body>
 

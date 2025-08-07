@@ -1,11 +1,11 @@
 <template>
   <div
-    class="flex gap-5 w-full flex-col lg:mt-[100px] md:mt-[102px] mt-[150px] lg:ml-[125px] md:ml-[150px] mr-[20px] ml-[20px] z-[8]"
+    class="flex gap-5 w-full flex-col lg:mt-[100px] md:mt-[102px] mt-[150px] lg:ml-[125px] md:ml-[150px] mr-[20px] ml-[20px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]"
   >
   <div>
-    <h1 class="text-white  font-bold mt-[-45px] text-start ">Regular Form</h1>
+    <h1 class=" text-white  font-bold mt-[-45px] text-start ">Regular Form</h1>
   </div>
-    <div class="lg:mr-60 md:mr-60 mr-2 lg:mt-[0px] md:mt-[0px] mt-[200px]">
+    <div class="lg:mr-60 md:mr-60 mr-2 2xl:mr-[20rem] lg:mt-[0px] md:mt-[0px] mt-[200px]">
       <!-- first div /card -->
       <div class="w-full rounded-xl">
         <h1 class="hidden lg:flex md:flex"> 
@@ -344,7 +344,7 @@
           : 'bg-gray-300 top-[7rem] transtiton-all duration-300 text-[#929daa]',
       ]"
       class="lg:fixed md:fixed absolute  left-0 right-0 lg:ml-[69rem] md:ml-[20rem] sm:ml-[10rem] ml-4 mr-5 rounded-xl 
-      shadow-lg border border-[#e7eaee23] p-3 flex flex-col"
+      shadow-lg border border-[#e7eaee23] p-3 flex flex-col 2xl:ml-[84rem]  2xl:mr-[17rem]"
     >
       <a href="#one" class="px-3 font-[400] text-[16px] focus:border-l"
         >input</a
