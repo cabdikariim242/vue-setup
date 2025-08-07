@@ -1,5 +1,4 @@
-so i wannna be able to change the colors of theinput 
-  <template>
+<template>
     <div>
 
       <!-- card one -->

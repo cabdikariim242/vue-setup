@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]"
+    class="w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]"
   >
    
     <!-- start Box  -->

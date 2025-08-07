@@ -3,7 +3,7 @@
     <!-- Trigger Button -->
     <div @click="toggleDropdown">
       <slot name="trigger">
-        <button :class="['text-white font-semibold px-4 py-2 rounded shadow', customclass]">
+        <button :class="['text-white font-semibold px-4 py-2 rounded shadow ', customclass]">
           {{ buttonText }}
         </button>
       </slot>

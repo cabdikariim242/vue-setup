@@ -1,6 +1,9 @@
 <template>
   <div
-    class="w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]"
+  class="w-full z-[8] 
+  mt-[170px] md:mt-[102px] lg:mt-[202px]
+  ml-[30px] md:ml-[150px] 2xl:ml-[360px]  2xl:mr-[270px]"
+
   >
    
     <!-- start text area -->
@@ -29,7 +32,7 @@
             placeholder="Write something..."
             helper="Enter your thoughts or feedback."
           />
-          <p class="mt-4 text-gray-700 dark:text-gray-900">
+          <p class="mt-4 text-gray-700 dark:text-gray-100">
             Message Show: {{ messageTwo }}
           </p>
         </div>
@@ -44,7 +47,7 @@
             label="MessageThree"
             placeholder="disbled Write something..."
             helper="Enter your thoughts or feedback."
-            is-disabled="false"
+            is-disabled="false" CustomClass="cursor-not-allowed"
           />
         </div>
       </fieldset>

@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8]">
+  <div class=" w-full flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]">
     
     <!-- Datepicker 1 -->
-          <div class="bg-green-900 shadow-lg rounded-lg p-4 w-[500px]"
+          <div class="bg-green-900 shadow-lg rounded-lg p-4 w-full"
            :class="show1 ? 'h-[440px]' : 'h-[120px]'"
           >
 
         <div class="flex w-full flex-col gap-4 justify-center relative">
-        <label class="text-white" for="date1">Pick Date</label>
+        <label class="text-white dark:text-[#fff]" for="date1">Pick Date</label>
 
         <input
           class="border focus:outline-none focus:ring p-3 py-1 placeholder:text-[#ac9b3d]"
@@ -18,7 +18,7 @@
           readonly
         />
 
-        <div v-if="show1" class="bg-white border rounded mt-2 p-4 z-10">
+        <div v-if="show1" class="bg-white  border rounded mt-2 p-4 z-10">
           <!-- Month + Year Selectors -->
           <div class="flex gap-3 mb-3">
             <select class="p-2 border rounded" v-model="selectedMonth1">
@@ -50,7 +50,7 @@
     </div>
 
     <!-- Datepicker 2 -->
-     <div class="bg-blue-900 shadow-lg rounded-lg p-4 w-[500px]"
+     <div class="bg-blue-900 shadow-lg rounded-lg p-4 w-full"
       :class="show2 ? 'h-[440px]' : 'h-[120px]'"
      >
 

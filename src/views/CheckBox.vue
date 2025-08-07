@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8]">
+    <div class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]">
 
 
   <!-- start check box -->
@@ -9,11 +9,11 @@
             <fieldset class="border p-4 mt-8">
   <legend class="text-xl">Check Box </legend>
 <div class="p-6">
-    <checkBox v-model="acceptTerms" >
+    <checkBox v-model="acceptTerms">
       I agree to the <a href="#" class="text-blue-600 underline">Terms & Conditions</a>
     </checkBox>
 
-    <p class="mt-4 text-sm text-black">
+    <p class="mt-4 text-sm text-black dark:text-white">
       Status:{{ acceptTerms ? '✔ Checked' : '✖ Not checked' }}
     </p>
   </div>
@@ -33,7 +33,7 @@
       </checkBox>
     </div>
 
-    <p class="mt-4 text-sm text-black">
+    <p class="mt-4 text-sm text-black dark:text-white">
       Selected: <span class="">{{ selected.join(', ') || 'None' }}</span>
     </p>
   </div>

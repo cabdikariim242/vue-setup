@@ -54,4 +54,10 @@ export default {
   display: inline-block;
   transition: all 0.2s ease-in-out;
 }
+
+@media (prefers-color-scheme: dark) {
+  .radio-custom {
+    border: 2px solid #fff; /* ✅ markay dark mode tahay */
+  }
+}
 </style>

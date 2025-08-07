@@ -4,7 +4,7 @@
       class="absolute top-0 left-0 right-0 h-[300px]"
       :class="[
         'transition-colors duration-300',
-        isScrollingUp ? 'bg-[#1b4b76]' : 'bg-white',
+        isScrollingUp ? 'bg-[rgb(27,75,118)]' : 'bg-[#ecf0f5] dark:bg-[#1b1b1b]',
       ]"
     >
       <div
@@ -12,80 +12,80 @@
           'transition-colors duration-300',
           isScrollingUp
             ? 'bg-[#1b4b76]'
-            : 'bg-[#051662] px-3 transtiton-all duration-300',
+            : 'bg-[#051662] px-3 transition-all duration-300',
         ]"
-        class="flex z-[9] justify-between items-center fixed top-5 lg:left-[115px] left-[5px] md:left-[115px] right-5 rounded-lg h-[60px]"
+        class="flex z-[9] justify-between items-center fixed top-5 lg:left-[135px] left-[5px] md:left-[115px] right-5 rounded-lg h-[60px] 2xl:ml-[250px] 2xl:mr-[250px]"
       >
         <div class="flex lg:hidden md:hidden sm:hidden">
           <i
             @click="$emit('toggle-this', !isopen)"
-            class="fa-solid fa-bars text-[25px] text-white p-[28px]"
-          ></i>
-
-          <i
-            class="fa-solid fa-magnifying-glass mt-8 text-white text-[18px]"
+            class="fa-solid fa-bars text-[25px] text-white dark:text-black p-[28px]"
           ></i>
         </div>
 
         <div class="container-1 ml-3 hidden lg:flex md:flex z-10">
-          <router-link to="/" class="mr-1 text-[#eff1f1] font-light">
+          <router-link
+            to="/"
+            class="mr-1 text-[#eff1f1] dark:text-white font-light"
+          >
             App
             <i
-              class="fa-solid fa-greater-than text-[8px] ml-1 text-[#6387a1]"
+              class="fa-solid fa-greater-than text-[8px] ml-1 text-[#6387a1] dark:text-white"
             ></i>
           </router-link>
-          <router-link to="/" class="mr-1 text-[#eff1f1] font-light">
+          <router-link
+            to="/buttons"
+            class="mr-1 text-[#eff1f1] dark:text-white font-light"
+          >
             Dashboards
             <i
-              class="fa-solid fa-greater-than text-[8px] ml-1 text-[#6387a1]"
+              class="fa-solid fa-greater-than text-[8px] ml-1 text-[#6387a1] dark:text-white"
             ></i>
           </router-link>
-          <router-link to="/" class="mr-1 text-[#6387a1] font-light">
+          <router-link
+            to="/TableViews"
+            class="mr-1 text-[#6387a1] dark:text-white font-light"
+          >
             Analytics
           </router-link>
         </div>
 
         <div
-          class="container-2 items-center w-[320px] px-4 py-2 rounded-lg bg-white/20 hidden lg:flex md:flex: sm:flex"
+          class="container-2 items-center w-[320px] px-4 py-2 rounded-lg bg-white/20 hidden lg:flex"
         >
-          <!-- Icon -->
           <i
-            class="fa-solid fa-magnifying-glass text-white/60 text-[15px] mr-2"
+            class="fa-solid fa-magnifying-glass text-white/60 dark:text-white text-[15px] mr-2"
           ></i>
-          <!-- Input -->
           <input
-            class="flex-1 bg-transparent outline-none border-none text-white text-[15px] placeholder-white font-serif"
+            class="flex-1 bg-transparent outline-none border-none text-white text-[15px] dark:text-white placeholder-white dark:placeholder-white font-serif"
             type="text"
             placeholder="Quick search..."
           />
-          <!-- Shortcut -->
           <span
-            class="ml-2 text-white/60 font-public-sans select-none text-[15px]"
+            class="ml-2 text-white/60 font-public-sans dark:text-white select-none text-[15px]"
             >⌘K</span
           >
         </div>
 
         <div class="container-3 flex items-center gap-6">
-          <button @click="toggleDarkMode">
-            <i
-              class="fa-solid fa-moon text-[#d1cccc] text-[18px]"
-              v-if="!isDark"
-            ></i>
-            <i class="fa-solid fa-sun text-yellow-400 text-[18px]" v-else></i>
-          </button>
-          <i class="fa-solid fa-grip text-[#d1cccc] text-[18px]"></i>
+          <DarkModeToggle />
           <button
             @click="toggleFullscreen"
-            class="px-4 py-2 text-white rounded flex items-center gap-2"
+            class="px-4 py-2 text-white rounded   items-center gap-2"
           >
             <i
               :class="
-                isFullscreen ? 'fa-solid fa-minimize' : 'fa-solid fa-expand'
+                isFullscreen
+                  ? 'fa-solid fa-minimize dark:text-black text-[18px]'
+                  : 'fa-solid fa-expand dark:text-black text-[18px]'
               "
             ></i>
           </button>
-          <i class="fa-solid fa-bell text-[#d1cccc] text-[18px]"></i>
-          <!-- Profile avatar -->
+          <i
+            class="fa-solid fa-bell text-[#d1cccc] dark:text-black text-[18px] cursor-pointer"
+              :class="{ 'animate-spin': isAnimating }" 
+            @click="handleNotificationClick"
+          ></i>
           <img
             src="../assets/yiksi.png"
             alt="Profile"
@@ -98,47 +98,53 @@
 </template>
 
 <script>
-export default {
-  props: ["isopen"],
+import DarkModeToggle from '@/components/DarkModeToggle.vue';
 
+export default {
+  props: ['isopen'],
+  components: {
+    DarkModeToggle,
+  },
   data() {
     return {
+      isAnimating: false,
       isDark: false,
       isScrollingUp: true,
       isFullscreen: false,
       lastScrollY: window.scrollY,
     };
   },
-
   methods: {
     handleScroll() {
       const currentScrollY = window.scrollY;
       this.isScrollingUp = currentScrollY < this.lastScrollY;
       this.lastScrollY = currentScrollY;
     },
+
+     handleNotificationClick() {
+    this.isAnimating = true;
+    // Remove animation class after 500ms (depends on animation duration)
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 1000);
+  },
+
     async toggleFullscreen() {
-      if (!this.isFullscreen) {
-        // Enter fullscreen
-        if (document.documentElement.requestFullscreen) {
+      try {
+        if (!document.fullscreenElement) {
           await document.documentElement.requestFullscreen();
-        } else if (document.documentElement.webkitRequestFullscreen) {
-          await document.documentElement.webkitRequestFullscreen();
-        }
-        this.isFullscreen = true;
-      } else {
-        // Exit fullscreen
-        if (document.exitFullscreen) {
+        } else {
           await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          await document.webkitExitFullscreen();
         }
-        this.isFullscreen = false;
+        
+      } catch (err) {
+        console.error('Fullscreen toggle error:', err);
       }
     },
-
-
-
-      toggleDarkMode() {
+    onFullScreenChange() {
+      this.isFullscreen = !!document.fullscreenElement;
+    },
+    toggleDarkMode() {
       this.isDark = !this.isDark;
       if (this.isDark) {
         document.documentElement.classList.add('dark');
@@ -147,20 +153,21 @@ export default {
         document.documentElement.classList.remove('dark');
         localStorage.theme = 'light';
       }
-    }
-  
+    },
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-      if (localStorage.theme === 'dark') {
+    window.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('fullscreenchange', this.onFullScreenChange);
+    if (localStorage.theme === 'dark') {
       document.documentElement.classList.add('dark');
       this.isDark = true;
     }
   },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    document.removeEventListener('fullscreenchange', this.onFullScreenChange);
   },
 };
 </script>
 
-<style></style>
+<style scoped></style>
