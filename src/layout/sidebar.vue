@@ -4,7 +4,7 @@
       @mouseenter="hover = true"
       @mouseleave="hover = false"
       :class="[
-        toggle || hover ? 'w-[300px] overflow-y-hidden hover:overflow-y-auto hover:overflow-auto ' : 'w-[80px]',
+        toggle || hover ? 'w-[270px] overflow-y-hidden hover:overflow-y-auto hover:overflow-auto ' : 'w-[80px]',
         'hidden  lg:flex md:flex flex-col bg-[#fefefe] dark:bg-[#0f0f0f]  opacity-95  group fixed bottom-3 top-0 left-3 transition-all duration-300 mr-10 mt-5 rounded-lg',
       ]"
       style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6)"
