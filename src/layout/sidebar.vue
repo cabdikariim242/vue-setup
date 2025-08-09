@@ -704,7 +704,7 @@ export default {
 }
 
 .dark .dropdown-active .link-text {
-  color: #fff;
+  color: #525252;
 }
 
 
