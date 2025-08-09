@@ -108,7 +108,7 @@ export default {
   data() {
     return {
       isAnimating: false,
-      isDark: false,
+      isDark: true,
       isScrollingUp: true,
       isFullscreen: false,
       lastScrollY: window.scrollY,
