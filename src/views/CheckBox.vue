@@ -9,7 +9,7 @@
             <fieldset class="border p-4 mt-8">
   <legend class="text-xl">Check Box </legend>
 <div class="p-6">
-    <checkBox v-model="acceptTerms" >
+    <checkBox v-model="acceptTerms">
       I agree to the <a href="#" class="text-blue-600 underline">Terms & Conditions</a>
     </checkBox>
 
@@ -33,7 +33,7 @@
       </checkBox>
     </div>
 
-    <p class="mt-4 text-sm text-black">
+    <p class="mt-4 text-sm text-black dark:text-white">
       Selected: <span class="">{{ selected.join(', ') || 'None' }}</span>
     </p>
   </div>

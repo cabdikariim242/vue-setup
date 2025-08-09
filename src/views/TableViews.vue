@@ -12,7 +12,7 @@
             type="text"
             v-model="searchText"
             placeholder="Search by name, gender, status, age, or date"
-            class="w-full md:w-[400px] px-4 py-2 border border-gray-300 bg-gray-600 text-white dark:text-black placeholder:text-white dark:placeholder:text-black rounded-lg focus:outline-none focus:ring focus:border-blue-400"
+            class="w-full md:w-[400px] px-4 py-2 border border-gray-300 bg-gray-600 text-white dark:text-white placeholder:text-white dark:placeholder:text-white rounded-lg focus:outline-none focus:ring focus:border-blue-400"
           />
 
           <div class="flex items-center gap-4">
@@ -173,7 +173,7 @@ export default {
           image: require("../assets/2.jpeg"),
           gender: "Male",
           status: "maqan",
-          joined: "2022-11-15",
+          joined: "2025-08-09",
           age: 34,
         },
         {
@@ -181,7 +181,7 @@ export default {
           image: require("../assets/5.jpeg"),
           gender: "Female",
           status: "joogo",
-          joined: "2025-07-30",
+          joined: "2025-08-10",
           age: 25,
         },
         {
@@ -189,7 +189,7 @@ export default {
           image: require("../assets/1.jpeg"),
           gender: "Female",
           status: "maqan",
-          joined: "2025-08-04",
+          joined: "2025-08-10",
           age: 25,
         },
         {
@@ -197,7 +197,7 @@ export default {
           image: require("../assets/femal 1.avif"),
           gender: "Female",
           status: "joogo",
-          joined: "2023-03-10",
+          joined: "2025-08-10",
           age: 28,
         },
         {
@@ -205,7 +205,7 @@ export default {
           image: require("../assets/female 2.avif"),
           gender: "Female",
           status: "maqan",
-          joined: "2022-08-25",
+          joined: "2025-08-10",
           age: 25,
         },
         {
@@ -213,7 +213,7 @@ export default {
           image: require("../assets/female 3.avif"),
           gender: "Female",
           status: "joogo",
-          joined: "2021-12-01",
+          joined: "2025-08-10",
           age: 30,
         },
         {
@@ -221,7 +221,7 @@ export default {
           image: require("../assets/female 4.avif"),
           gender: "Female",
           status: "maqan",
-          joined: "2024-06-15",
+          joined: "2025-08-10",
           age: 29,
         },
         {
@@ -229,7 +229,7 @@ export default {
           image: require("../assets/female 5.avif"),
           gender: "Female",
           status: "joogo",
-          joined: "2023-10-05",
+          joined: "2025-08-10",
           age: 26,
         },
         {
@@ -237,7 +237,7 @@ export default {
           image: require("../assets/female 6.avif"),
           gender: "Female",
           status: "maqan",
-          joined: "2022-05-11",
+          joined: "2025-08-10",
           age: 31,
         },
         {

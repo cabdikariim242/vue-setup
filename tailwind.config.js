@@ -6,7 +6,12 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkbg: '#1e293b',   // background madow
+        darktext: '#f8fafc', // qoraal cad
+      }
+    },
   },
   plugins: [],
 }
