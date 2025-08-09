@@ -37,7 +37,7 @@
   </BaseCard>
   <!-- next two -->
 
-    <BaseCard class=" bg-white dark:bg-black dark:text-white rounded-2xl shadow-lg mt-14">
+    <BaseCard class=" bg-white dark:bg-black dark:text-whiter rounded-2xl shadow-lg mt-14">
         <h1 class="text-left text-2xl mt-4 mb-4 ml-4">Image Full Screen</h1>
         <hr>
         <h4 class="text-[18px] m-6">Image zoom lets users view pictures in greater detail by hovering or tapping. This feature enhances clarity, highlights fine elements, and improves engagement—ideal for product images, galleries, or art. It ensures a seamless, interactive, and professional viewing experience.</h4>
