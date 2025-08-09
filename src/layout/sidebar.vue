@@ -1,15 +1,26 @@
 <template>
   <div class="z-10 relative">
-    <div @mouseenter="hover = true" @mouseleave="hover = false" :class="[
-      toggle || hover ? 'w-[270px] overflow-y-hidden hover:overflow-y-auto hover:overflow-auto ' : 'w-[80px]',
-      'hidden  lg:flex md:flex flex-col bg-[#fefefe] dark:bg-[#0f0f0f]  opacity-95  group fixed bottom-3 top-0 left-3 transition-all duration-300 mr-10 mt-5 rounded-lg',
-    ]" style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6)">
+    <div
+     ref="scrollArea"
+    class="scrollarea"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+      :class="[
+        toggle || hover ? 'w-[270px]'  : 'w-[80px]',
+        'hidden  lg:flex md:flex flex-col overflow-x-hidden hover:overflow-x-auto bg-[#fefefe] dark:bg-[#0f0f0f]  opacity-95  group fixed bottom-3 top-0 left-3 transition-all duration-300 mr-10 mt-5 rounded-lg',
+      ]"
+      style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6)"
+    >
       <!-- all icons are here -->
       <div class="flex justify-between items-center">
         <div class="flex">
           <i
-            class="fa-brands fa-stackpath text-[35px] text-[#206c93] pl-6 pr-3 pt-3 text-5 transition-transform duration-50 rounded-full group-hover:rotate-[360deg]"></i>
-          <p v-if="!toggle" class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-[500] dark:text-white">
+            class="fa-brands fa-stackpath text-[35px] text-[#206c93] pl-6 pr-3 pt-3 text-5 transition-transform duration-50 rounded-full group-hover:rotate-[360deg] dark:text-white"
+          ></i>
+          <p
+            v-if="!toggle"
+            class="mt-5 group-hover:flex hidden text-[#465569] ml-[20px] font-[500] dark:text-white"
+          >
             ECHO
           </p>
           <p v-if="toggle" class="mt-5 text-[#465569] ml-[20px] font-[500] dark:text-white">
@@ -35,7 +46,11 @@
       </div>
 
       <!-- content -->
-      <router-link :to="{ name: 'buttons' }" class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'buttons' }"
+        class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-floppy-disk text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -47,7 +62,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'inputGroup' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'inputGroup' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -59,7 +78,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'alert' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'alert' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -72,38 +95,47 @@
       </router-link>
 
       <div class="w-full">
-        <router-link :to="{ name: 'Dropdown' }"
-          class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
-          <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
-            <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
-            <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
-              FORM ELEMENTS
-            </p>
-            <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-              FORM ELEMENTS
-            </p>
-            <i v-if="!toggle"
-              class="fa-solid fa-chevron-down text-[#465569] group-hover:flex text-[15px] hidden  dark:text-white"></i>
-            <i v-if="toggle" class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white"></i>
-          </div>
-
-        </router-link>
+        <router-link
+        :to="{ name: 'Dropdown' }"
+        class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]" @click="showrouter = !showrouter">
+         <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white"
+          >
+            FORM ELEMENTS
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
+            FORM ELEMENTS
+          </p>
+          <i  v-if="!toggle" class="fa-solid fa-chevron-down text-[#465569] group-hover:flex text-[15px] hidden  dark:text-white"></i>
+          <i  v-if="toggle" class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white"></i>
+        </div>
+          
+         </router-link>
 
 
         <div v-if="showrouter" class="border-2 m-5 mr-2 border-[#e2e8f0]">
-          <router-link :to="{ name: 'Dropdown' }" exact-active-class="dropdown-active"
-            class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
-            <div class=" gap-3 m-3 flex justify-start items-center">
-              <i class="fa-solid fa-circle-down text-[#4b93b1] text-[18px] dark:text-white"></i>
-              <p v-if="!toggle"
-                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white ">
-                Dropdown
-              </p>
-              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
-                Dropdown
-              </p>
-            </div>
-          </router-link>
+          <router-link 
+        :to="{ name: 'Dropdown' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)] "
+      >
+        <div class=" gap-3 m-3 flex justify-start items-center">
+          <i class="fa-solid fa-circle-down text-[#4b93b1] text-[18px] dark:text-white"></i>
+          <p
+            v-if="!toggle"
+            class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white "
+          >
+            Dropdown
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
+            Dropdown
+          </p>
+        </div>
+      </router-link>
 
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
@@ -182,7 +214,11 @@
         </div>
       </div>
 
-      <router-link :to="{ name: 'tabs' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'tabs' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -194,8 +230,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'AccordionView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'AccordionView' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-chevron-down text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -206,7 +245,11 @@
           </p>
         </div>
       </router-link>
-      <router-link :to="{ name: 'TableViews' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'TableViews' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-table text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -218,7 +261,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'DatePicker' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'DatePicker' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -230,8 +277,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'ImageZoomView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'ImageZoomView' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
@@ -243,7 +293,11 @@
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'RegularForm' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'RegularForm' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-regular fa-clipboard text-[#4b93b1] dark:text-white"></i>
           <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white ">
@@ -267,7 +321,9 @@
       <!-- all icons are here -->
       <div class="flex justify-between items-center">
         <div class="flex">
-          <i class="fa-brands fa-stackpath text-[#206c93] text-[35px] pl-6 pr-3 pt-3 text-5 rounded-full"></i>
+          <i
+            class="fa-brands fa-stackpath text-[#206c93] text-[35px] pl-6 pr-3 pt-3 text-5 rounded-full dark:text-white"
+          ></i>
           <p class="mt-5 text-[#465569] font-[500] ml-[20px] dark:text-white">ECHO</p>
         </div>
         <div class="mr-2">
@@ -281,21 +337,33 @@
       </div>
 
       <!-- content -->
-      <router-link :to="{ name: 'buttons' }" class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'buttons' }"
+        class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-floppy-disk text-[18px] text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">BUTTONS</p>
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'inputGroup' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'inputGroup' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">INPUTGROUPS</p>
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'alert' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'alert' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-triangle-exclamation text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">ALERT</p>
@@ -303,32 +371,43 @@
       </router-link>
 
       <div class="w-full">
-        <router-link :to="{ name: 'Dropdown' }"
-          class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]" @click="showrouter = !showrouter">
-          <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
-            <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
-            <p class=" text-[15px] text-[#465569] font-[500] dark:text-white">
-              FORM ELEMENTS
-            </p>
-
-
-            <i class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white "></i>
-          </div>
-
-        </router-link>
+        <router-link
+        :to="{ name: 'Dropdown' }"
+        class="flex mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]" @click="showrouter = !showrouter">
+         <div class="ml-5 my-4 gap-3 mx-6 flex justify-start items-center">
+          <i class="fa-brands fa-elementor text-[#4b93b1] text-[20px] dark:text-white"></i>
+          <p
+           
+            class=" text-[15px] text-[#465569] font-[500] dark:text-white"
+          >
+            FORM ELEMENTS
+          </p>
+          
+          
+          <i class="fa-solid fa-chevron-down text-[#465569] text-[15px] dark:text-white "></i>
+        </div>
+          
+         </router-link>
 
 
         <div v-if="showrouter" class="border-2 m-5 mr-2 border-[#e2e8f0]">
-          <router-link :to="{ name: 'Dropdown' }" exact-active-class="dropdown-active"
-            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
-            <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-circle-down text-[18px]  text-[#4b93b1] dark:text-white "></i>
-              <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white">
-                Dropdown
-              </p>
-
-            </div>
-          </router-link>
+            <router-link
+        :to="{ name: 'Dropdown' }"
+        exact-active-class="dropdown-active"
+        class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)] "
+      >
+        <div class=" gap-3 mx-3 flex justify-start items-center">
+          <i class="fa-solid fa-circle-down text-[18px]  text-[#4b93b1] dark:text-white "></i>
+          <p
+            
+            class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white"
+          >
+            Dropdown
+          </p>
+          
+        </div>
+      </router-link>
 
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
@@ -397,42 +476,64 @@
         </div>
       </div>
 
-      <router-link :to="{ name: 'tabs' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'tabs' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-table-columns text-[20px] text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">TABS</p>
         </div>
       </router-link>
-      <router-link :to="{ name: 'TableViews' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'TableViews' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-table text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">Table</p>
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'AccordionView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'AccordionView' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-chevron-down text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">Accordion</p>
         </div>
       </router-link>
-      <router-link :to="{ name: 'DatePicker' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'DatePicker' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">DatePicker</p>
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'ImageZoomView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'ImageZoomView' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">ImageZoomView</p>
         </div>
       </router-link>
 
-      <router-link :to="{ name: 'RegularForm' }" class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+      <router-link
+        :to="{ name: 'RegularForm' }"
+        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
+         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+      >
         <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
           <i class="fa-regular fa-clipboard text-[#4b93b1] dark:text-white"></i>
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">RegularForm</p>
@@ -444,29 +545,60 @@
 </template>
 
 <script>
+
 export default {
   props: ["isopen"],
-
   data() {
     return {
       toggle: false,
       hover: false,
       showrouter: false,
+      hideTimer: null,
     };
   },
+  mounted() {
+    const box = this.$refs.scrollArea;
+    if (!box) return;
 
+    // show the thin scrollbar while scrolling, then hide
+    this.onScroll = () => {
+      box.classList.add('is-scrolling');
+      clearTimeout(this.hideTimer);
+      this.hideTimer = setTimeout(() => {
+        box.classList.remove('is-scrolling');
+      }, 700);
+    };
+
+    box.addEventListener('scroll', this.onScroll, { passive: true });
+  },
+  beforeUnmount() {
+    const box = this.$refs.scrollArea;
+    if (box && this.onScroll) box.removeEventListener('scroll', this.onScroll);
+    clearTimeout(this.hideTimer);
+  },
   methods: {
     togglesidebar() {
       this.toggle = !this.toggle;
     },
   },
 };
+
 </script>
 
 <style scoped>
 .router-link-exact-active {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  /* background-color: #f3f0f0; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+
 }
+
+.dark .router-link-exact-active {
+  background-color: #1e1e1e;
+  
+}
+
+
+
 
 /* in src/assets/tailwind.css or a global CSS file */
 .dropdown-active .link-text {
@@ -474,6 +606,35 @@ export default {
 }
 
 .dark .dropdown-active .link-text {
-  color: #fff;
+  color: #525252;
+}
+
+
+:deep(.scrollarea) {
+  overflow-y: auto;
+}
+
+:deep(.scrollarea::-webkit-scrollbar) {
+  width: 2px;
+}
+
+:deep(.scrollarea::-webkit-scrollbar-track) {
+  background: transparent;
+  position: relative;
+}
+
+:deep(.scrollarea::-webkit-scrollbar-thumb) {
+  background: rgba(0,0,0,0.18);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  height: 10px !important; /* qasab height CSS-wise */
+}
+
+/* Trick: use box-shadow to fake a small thumb centered in the track */
+:deep(.scrollarea::-webkit-scrollbar-thumb) {
+  background: transparent;
+  box-shadow: inset 0 0 0 10px rgba(0,0,0,0.18);
+  border-radius: 10px;
 }
 </style>

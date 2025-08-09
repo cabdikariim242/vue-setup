@@ -108,7 +108,7 @@ export default {
   data() {
     return {
       isAnimating: false,
-      isDark: false,
+      isDark: true,
       isScrollingUp: true,
       isFullscreen: false,
       lastScrollY: window.scrollY,
@@ -126,7 +126,7 @@ export default {
     // Remove animation class after 500ms (depends on animation duration)
     setTimeout(() => {
       this.isAnimating = false;
-    }, 1000);
+    }, 300);
   },
 
     async toggleFullscreen() {

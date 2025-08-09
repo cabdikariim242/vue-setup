@@ -1,1 +1,1 @@
-https://vue-setup-git-main-cabdikariim242s-projects.vercel.app/
+(https://vue-setup.vercel.app/)
