@@ -68,7 +68,7 @@
         </div>
 
         <div class="container-3 flex items-center gap-6">
-          <DarkModeToggle />
+         
           <button
             @click="toggleFullscreen"
             class="px-4 py-2 text-white rounded   items-center gap-2"
