@@ -2,7 +2,7 @@
   <div
   class="w-full z-[8] 
   mt-[170px] md:mt-[102px] lg:mt-[202px]
-  ml-[30px] md:ml-[150px] 2xl:ml-[360px]  2xl:mr-[270px]"
+  ml-[30px] md:ml-[150px] 2xl:ml-[383px]  2xl:mr-[270px]"
 
   >
    
@@ -50,6 +50,7 @@
             is-disabled="false" CustomClass="cursor-not-allowed"
           />
         </div>
+        <p>The size of a text area is specified by the cols and rows attributes (or with CSS). The name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the text area will be submitted). The id attribute is needed to associate the text area with a label.</p>
       </fieldset>
     </base-card>
 

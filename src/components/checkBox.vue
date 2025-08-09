@@ -3,6 +3,7 @@
     <input
       type="checkbox"
       :checked="modelValue"
+            :disabled="disabled"
       @change="$emit('update:modelValue', $event.target.checked)"
       class=" cursor-pointer form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out border-gray-300 rounded focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800"
     />
@@ -17,6 +18,7 @@ export default {
   name: 'BaseCheckbox',
   props: {
     modelValue: Boolean,
+    disabled: Boolean,
   },
 };
 </script>
