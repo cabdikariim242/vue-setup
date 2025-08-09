@@ -5,10 +5,10 @@
     aria-label="Toggle Dark Mode"
   >
     <span v-if="isDark">
-        <i class="fa-regular fa-moon text-[20px] text-[#0e0d0d]"></i>
+        <i class="fa-solid fa-moon text-[18px] text-[#0e0d0d]"></i>
     </span>
     <span v-else>
-        <i class="fas fa-sun text-[20px] text-[#d6d1d1]"></i>
+        <i class="fa-solid fa-sun text-[18px] text-[#d6d1d1]"></i>
     </span>
   </button>
 </template>
