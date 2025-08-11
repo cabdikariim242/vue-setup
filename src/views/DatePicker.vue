@@ -1,11 +1,17 @@
 <template>
-  <div class="w-full flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8] 2xl:ml-[360px] 2xl:mr-[270px]">
-
+  <div
+    class="w-full flex flex-col md:flex-row gap-10 mt-[240px] lg:mt-[220px] lg:ml-[130px] md:ml-[100px] ml-[10px] lg:mr-[170px] md:mr-[50px] mr-[10px] z-[8] 2xl:ml-[360px] 2xl:mr-[270px]"
+  >
     <!-- Datepicker 1 -->
-    <div ref="dp1" class="bg-green-900 shadow-lg rounded-lg p-4 w-full"
-         :class="show1 ? 'h-[520px]' : 'h-[120px]'">
+    <div
+      ref="dp1"
+      class="bg-green-900 shadow-lg rounded-lg p-4 w-full"
+      :class="show1 ? 'h-[520px]' : 'h-[120px]'"
+    >
       <div class="flex w-full flex-col gap-4 justify-center relative">
-        <label class="text-white dark:text-[#fff]" for="date1">Pick Date & Time</label>
+        <label class="text-white dark:text-[#fff]" for="date1"
+          >Pick Date & Time</label
+        >
 
         <input
           class="border focus:outline-none focus:ring p-3 py-1 placeholder:text-[#ac9b3d]"
@@ -20,7 +26,9 @@
           <!-- Month + Year Selectors -->
           <div class="flex gap-3 mb-3">
             <select class="p-2 border rounded" v-model="selectedMonth1">
-              <option v-for="monthName in monthNames" :key="monthName">{{ monthName }}</option>
+              <option v-for="monthName in monthNames" :key="monthName">
+                {{ monthName }}
+              </option>
             </select>
             <select class="p-2 border rounded" v-model="selectedYear1">
               <option v-for="year in years" :key="year">{{ year }}</option>
@@ -32,12 +40,12 @@
             <div v-for="day in weekDays" :key="day">{{ day }}</div>
           </div>
           <div class="grid grid-cols-7 text-center mb-3">
-            <div v-for="n in firstDayOfMonth1" :key="'empty1'+n"></div>
+            <div v-for="n in firstDayOfMonth1" :key="'empty1' + n"></div>
             <div
               v-for="day in daysInMonth1"
-              :key="'day1'+day"
+              :key="'day1' + day"
               class="p-2 cursor-pointer rounded hover:bg-blue-200"
-              :class="{'bg-blue-500 text-white': selectedDay1 === day}"
+              :class="{ 'bg-blue-500 text-white': selectedDay1 === day }"
               @click="selectedDay1 = day"
             >
               {{ day }}
@@ -48,25 +56,40 @@
           <div class="flex items-center gap-3 mb-3">
             <label class="font-semibold">Time:</label>
             <select class="p-2 border rounded" v-model.number="selectedHour1">
-              <option v-for="h in hours" :key="'h1'+h" :value="h">{{ pad(h) }}</option>
+              <option v-for="h in hours" :key="'h1' + h" :value="h">
+                {{ pad(h) }}
+              </option>
             </select>
             <span>:</span>
             <select class="p-2 border rounded" v-model.number="selectedMinute1">
-              <option v-for="m in minutes" :key="'m1'+m" :value="m">{{ pad(m) }}</option>
+              <option v-for="m in minutes" :key="'m1' + m" :value="m">
+                {{ pad(m) }}
+              </option>
             </select>
           </div>
 
           <div class="flex justify-end gap-2">
-            <button class="px-3 py-2 border rounded" @click="reset1">Clear</button>
-            <button class="px-3 py-2 bg-blue-600 text-white rounded" :disabled="!selectedDay1" @click="apply1">Apply</button>
+            <button class="px-3 py-2 border rounded" @click="reset1">
+              Clear
+            </button>
+            <button
+              class="px-3 py-2 bg-blue-600 text-white rounded"
+              :disabled="!selectedDay1"
+              @click="apply1"
+            >
+              Apply
+            </button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Datepicker 2 -->
-    <div ref="dp2" class="bg-blue-900 shadow-lg rounded-lg p-4 w-full"
-         :class="show2 ? 'h-[520px]' : 'h-[120px]'">
+    <div
+      ref="dp2"
+      class="bg-blue-900 shadow-lg rounded-lg p-4 w-full"
+      :class="show2 ? 'h-[520px]' : 'h-[120px]'"
+    >
       <div class="flex w-full flex-col gap-4 justify-center relative">
         <label class="text-white" for="date2">Pick Date & Time</label>
 
@@ -83,7 +106,9 @@
           <!-- Month + Year Selectors -->
           <div class="flex gap-3 mb-3">
             <select class="p-2 border rounded" v-model="selectedMonth2">
-              <option v-for="monthName in monthNames" :key="monthName">{{ monthName }}</option>
+              <option v-for="monthName in monthNames" :key="monthName">
+                {{ monthName }}
+              </option>
             </select>
             <select class="p-2 border rounded" v-model="selectedYear2">
               <option v-for="year in years" :key="year">{{ year }}</option>
@@ -95,12 +120,12 @@
             <div v-for="day in weekDays" :key="day">{{ day }}</div>
           </div>
           <div class="grid grid-cols-7 text-center mb-3">
-            <div v-for="n in firstDayOfMonth2" :key="'empty2'+n"></div>
+            <div v-for="n in firstDayOfMonth2" :key="'empty2' + n"></div>
             <div
               v-for="day in daysInMonth2"
-              :key="'day2'+day"
+              :key="'day2' + day"
               class="p-2 cursor-pointer rounded hover:bg-green-200"
-              :class="{'bg-green-500 text-white': selectedDay2 === day}"
+              :class="{ 'bg-green-500 text-white': selectedDay2 === day }"
               @click="selectedDay2 = day"
             >
               {{ day }}
@@ -111,22 +136,35 @@
           <div class="flex items-center gap-3 mb-3">
             <label class="font-semibold">Time:</label>
             <select class="p-2 border rounded" v-model.number="selectedHour2">
-              <option v-for="h in hours" :key="'h2'+h" :value="h">{{ pad(h) }}</option>
+              <option v-for="h in hours" :key="'h2' + h" :value="h">
+                {{ pad(h) }}
+              </option>
             </select>
             <span>:</span>
             <select class="p-2 border rounded" v-model.number="selectedMinute2">
-              <option v-for="m in minutes" :key="'m2'+m" :value="m">{{ pad(m) }}</option>
+              <option v-for="m in minutes" :key="'m2' + m" :value="m">
+                {{ pad(m) }}
+              </option>
             </select>
           </div>
 
           <div class="flex justify-end gap-2">
-            <button class="px-3 py-2 border rounded" @click="reset2">Clear</button>
-            <button class="px-3 py-2 bg-green-600 text-white rounded" :disabled="!selectedDay2" @click="apply2">Apply</button>
+            <button class="px-3 py-2 border rounded" @click="reset2">
+              Clear
+            </button>
+            <button
+              class="px-3 py-2 bg-green-600 text-white rounded"
+              :disabled="!selectedDay2"
+              @click="apply2"
+            >
+              Apply
+            </button>
           </div>
         </div>
       </div>
     </div>
 
+    
   </div>
 </template>
 
@@ -139,11 +177,21 @@ export default {
     return {
       years: [],
       monthNames: [
-        "January","February","March","April","May","June",
-        "July","August","September","October","November","December"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
       ],
       weekDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      hours: Array.from({ length: 24 }, (_, i) => i),   // 00..23
+      hours: Array.from({ length: 24 }, (_, i) => i), // 00..23
       minutes: Array.from({ length: 60 }, (_, i) => i), // 00..59
 
       // Datepicker 1 state
@@ -167,17 +215,31 @@ export default {
   },
   computed: {
     // Datepicker 1
-    monthIndex1() { return this.monthNames.indexOf(this.selectedMonth1); },
-    daysInMonth1() { return new Date(this.selectedYear1, this.monthIndex1 + 1, 0).getDate(); },
-    firstDayOfMonth1() { return new Date(this.selectedYear1, this.monthIndex1, 1).getDay(); },
+    monthIndex1() {
+      return this.monthNames.indexOf(this.selectedMonth1);
+    },
+    daysInMonth1() {
+      return new Date(this.selectedYear1, this.monthIndex1 + 1, 0).getDate();
+    },
+    firstDayOfMonth1() {
+      return new Date(this.selectedYear1, this.monthIndex1, 1).getDay();
+    },
 
     // Datepicker 2
-    monthIndex2() { return this.monthNames.indexOf(this.selectedMonth2); },
-    daysInMonth2() { return new Date(this.selectedYear2, this.monthIndex2 + 1, 0).getDate(); },
-    firstDayOfMonth2() { return new Date(this.selectedYear2, this.monthIndex2, 1).getDay(); }
+    monthIndex2() {
+      return this.monthNames.indexOf(this.selectedMonth2);
+    },
+    daysInMonth2() {
+      return new Date(this.selectedYear2, this.monthIndex2 + 1, 0).getDate();
+    },
+    firstDayOfMonth2() {
+      return new Date(this.selectedYear2, this.monthIndex2, 1).getDay();
+    },
   },
   methods: {
-    pad(n) { return String(n).padStart(2, "0"); },
+    pad(n) {
+      return String(n).padStart(2, "0");
+    },
 
     apply1() {
       if (!this.selectedDay1) return;
@@ -213,6 +275,49 @@ export default {
       this.selectedDate2 = "";
     },
 
+    pad(n) {
+      return String(n).padStart(2, "0");
+    },
+
+    setDefault(which) {
+      const now = new Date();
+      const y = now.getFullYear();
+      const mIdx = now.getMonth(); // 0..11
+      const d = now.getDate();
+      const hh = now.getHours();
+      const mm = now.getMinutes();
+
+      if (which === 1) {
+        this.selectedYear1 = y;
+        this.selectedMonth1 = this.monthNames[mIdx];
+        this.selectedDay1 = d;
+        if ("selectedHour1" in this) this.selectedHour1 = hh;
+        if ("selectedMinute1" in this) this.selectedMinute1 = mm;
+
+        // Haddii aad rabto DATE + TIME:
+        this.selectedDate1 = `${y}-${this.pad(mIdx + 1)}-${this.pad(d)}${
+          "selectedHour1" in this ? ` ${this.pad(hh)}:${this.pad(mm)}` : ""
+        }`;
+
+        // Haddii aad rabto DATE kaliya, isticmaal tan halkii:
+        // this.selectedDate1 = `${y}-${this.pad(mIdx+1)}-${this.pad(d)}`;
+      }
+
+      if (which === 2) {
+        this.selectedYear2 = y;
+        this.selectedMonth2 = this.monthNames[mIdx];
+        this.selectedDay2 = d;
+        if ("selectedHour2" in this) this.selectedHour2 = hh;
+        if ("selectedMinute2" in this) this.selectedMinute2 = mm;
+
+        this.selectedDate2 = `${y}-${this.pad(mIdx + 1)}-${this.pad(d)}${
+          "selectedHour2" in this ? ` ${this.pad(hh)}:${this.pad(mm)}` : ""
+        }`;
+        // Ama DATE kaliya:
+        // this.selectedDate2 = `${y}-${this.pad(mIdx+1)}-${this.pad(d)}`;
+      }
+    },
+
     // Close on outside click
     handleClickOutside(e) {
       if (this.show1 && this.$refs.dp1 && !this.$refs.dp1.contains(e.target)) {
@@ -228,7 +333,7 @@ export default {
         this.show1 = false;
         this.show2 = false;
       }
-    }
+    },
   },
   mounted() {
     const now = new Date();
@@ -251,6 +356,6 @@ export default {
   beforeUnmount() {
     document.removeEventListener("mousedown", this.handleClickOutside);
     document.removeEventListener("keydown", this.handleEsc);
-  }
+  },
 };
 </script>

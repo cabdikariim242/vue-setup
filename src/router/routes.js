@@ -17,6 +17,8 @@ const TextArea = () =>  import('@/views/TextArea.vue')
 const CheckBox = () =>  import('@/views/CheckBox.vue')
 const fileupload = () =>  import('@/views/fileupload.vue')
 const SelectBox = () =>  import('@/views/SelectBox.vue')
+const fieldset = () =>  import('@/views/fieldset.vue')
+const DataListInput = () =>  import('@/views/DataListInput.vue')
 
 
 export default [
@@ -112,6 +114,16 @@ export default [
     path: '/SelectBox',
     name: 'SelectBox',
     component: SelectBox
+  },
+   {
+    path: '/fieldset',
+    name: 'fieldset',
+    component: fieldset
+  },
+   {
+    path: '/DataListInput',
+    name: 'DataListInput',
+    component: DataListInput
   },
  
 ]

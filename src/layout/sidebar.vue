@@ -211,6 +211,34 @@
             </div>
           </router-link>
 
+          
+          <router-link :to="{ name: 'fieldset' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <p v-if="!toggle"
+                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white">
+                fieldset
+              </p>
+              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+                fieldset
+              </p>
+            </div>
+          </router-link>
+          <router-link :to="{ name: 'DataListInput' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <p v-if="!toggle"
+                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white">
+                DataListInput
+              </p>
+              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+                DataListInput
+              </p>
+            </div>
+          </router-link>
+
         </div>
       </div>
 
