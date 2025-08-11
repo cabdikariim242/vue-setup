@@ -129,7 +129,6 @@
 import textArea from "@/components/textArea.vue";
 import BaseCard from "@/components/BaseCard.vue";
 import checkBox from "@/components/checkBox.vue";
-import FileUploader from "@/components/FileUploader.vue";
 import SelectBox from "@/components/SelectBox.vue";
 
 export default {
@@ -137,7 +136,6 @@ export default {
     textArea,
     BaseCard,
     checkBox,
-    FileUploader,
     SelectBox,
   },
   data() {
