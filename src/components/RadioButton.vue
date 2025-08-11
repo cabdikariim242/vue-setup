@@ -1,15 +1,27 @@
 <template>
-  <label class="radio-label">
+  <label class="radio-label"
+
+  >
+  
     <input
       type="radio"
       :name="name"
       :value="value"
-      v-model="model"
+       v-model="model"
       class="hidden peer"
+      :disabled="disabled"
+      :class="customclass"
+      
     />
+
     <span
-      class="radio-custom peer-checked:ring-4 peer-checked:ring-blue-500 peer-checked:border-blue-500"
+      :class="[
+        customclass,
+        'peer-checked:ring-4 peer-checked:ring-blue-500 peer-checked:border-blue-500 border-2 border-black dark:border-white'
+      ]"
     ></span>
+    
+    
     {{ label }}
   </label>
 </template>
@@ -21,19 +33,25 @@ export default {
     name: String,
     label: String,
     value: String,
-    modelValue: String
+    modelValue: [
+      String, Number, Boolean
+
+    ],
+    disabled: Boolean,
+    customclass: {
+      type: String,
+      default: ''
+    }
   },
-  emits: ["update:modelValue"],
+
+    emits: ["update:modelValue"],
   computed: {
-    model: {
-      get() {
-        return this.modelValue;
-      },
-      set(val) {
-        this.$emit("update:modelValue", val);
-      }
+     model: {
+      get() { return this.modelValue; },
+      set(v) { this.$emit("update:modelValue", v); }
     }
   }
+  
 };
 </script>
 
@@ -41,23 +59,9 @@ export default {
 .radio-label {
   display: flex;
   align-items: center;
-  cursor: pointer;
   gap: 6px;
 }
 
-/* Radio Circle Base */
-.radio-custom {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #333;
-  border-radius: 50%;
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-}
 
-@media (prefers-color-scheme: dark) {
-  .radio-custom {
-    border: 2px solid #fff; /* ✅ markay dark mode tahay */
-  }
-}
+
 </style>
