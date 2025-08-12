@@ -17,6 +17,7 @@ const TextArea = () =>  import('@/views/TextArea.vue')
 const CheckBox = () =>  import('@/views/CheckBox.vue')
 const fileupload = () =>  import('@/views/fileupload.vue')
 const SelectBox = () =>  import('@/views/SelectBox.vue')
+const RegularTableView = () =>  import('@/views/RegularTableView.vue')
 
 
 export default [
@@ -44,6 +45,12 @@ export default [
     path: '/tabs',
     name: 'tabs',
     component: tabs
+   
+  },
+  {
+    path: '/RegularTableView',
+    name: 'RegularTableView',
+    component: RegularTableView
    
   },
   {
