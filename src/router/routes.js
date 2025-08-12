@@ -17,6 +17,8 @@ const TextArea = () =>  import('@/views/TextArea.vue')
 const CheckBox = () =>  import('@/views/CheckBox.vue')
 const fileupload = () =>  import('@/views/fileupload.vue')
 const SelectBox = () =>  import('@/views/SelectBox.vue')
+const TomSelectView = () =>  import('@/views/TomSelectView.vue')
+
 const RegularTableView = () =>  import('@/views/RegularTableView.vue')
 
 
@@ -120,5 +122,11 @@ export default [
     name: 'SelectBox',
     component: SelectBox
   },
+     {
+    path: '/TomSelectView',
+    name: 'TomSelectView',
+    component: TomSelectView
+  },
+ 
  
 ]
