@@ -20,7 +20,6 @@ const SelectBox = () =>  import('@/views/SelectBox.vue')
 const TomSelectView = () =>  import('@/views/TomSelectView.vue')
 
 
-
 export default [
   {
     path: '/',

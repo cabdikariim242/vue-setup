@@ -137,6 +137,22 @@
         </div>
       </router-link>
 
+      <router-link
+        :to="{ name: 'DatePicker' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)] "
+      >
+        <div class=" gap-3 mt-5 m-3 flex justify-start items-center">
+          <i class="fa-solid fa-calendar text-[#4b93b1] text-[18px] dark:text-white"></i>
+          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] link-text font-[500] dark:text-white">
+            DatePicker
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+            DatePicker
+          </p>
+        </div>
+      </router-link>
+
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 mt-5 flex justify-start items-center">
@@ -275,21 +291,7 @@
         </div>
       </router-link>
 
-      <router-link
-        :to="{ name: 'DatePicker' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
-          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
-            DatePicker
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-            DatePicker
-          </p>
-        </div>
-      </router-link>
+      
 
       <router-link
         :to="{ name: 'ImageZoomView' }"
@@ -322,6 +324,8 @@
           </p>
         </div>
       </router-link>
+
+
 
 
 
@@ -423,6 +427,16 @@
         </div>
       </router-link>
 
+          <router-link :to="{ name: 'DatePicker' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="far fa-circle text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <p class=" text-[15px]  text-[#465569] font-[500] link-text  dark:text-white">
+                DatePicker
+              </p>
+
+            </div>
+          </router-link>
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
@@ -532,16 +546,7 @@
           <p class="text-[15px] text-[#465569] font-[500] dark:text-white">Accordion</p>
         </div>
       </router-link>
-      <router-link
-        :to="{ name: 'DatePicker' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-calendar text-[#4b93b1] dark:text-white"></i>
-          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">DatePicker</p>
-        </div>
-      </router-link>
+      
 
       <router-link
         :to="{ name: 'ImageZoomView' }"
