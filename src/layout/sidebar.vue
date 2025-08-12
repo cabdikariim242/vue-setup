@@ -326,21 +326,6 @@
       </router-link>
 
 
-      <router-link
-        :to="{ name: 'RegularTableView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-regular fa-clipboard text-[#4b93b1] dark:text-white"></i>
-          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white ">
-            RegularTableView
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-            RegularTableView
-          </p>
-        </div>
-      </router-link>
 
 
 

@@ -19,8 +19,6 @@ const fileupload = () =>  import('@/views/fileupload.vue')
 const SelectBox = () =>  import('@/views/SelectBox.vue')
 const TomSelectView = () =>  import('@/views/TomSelectView.vue')
 
-const RegularTableView = () =>  import('@/views/RegularTableView.vue')
-
 
 export default [
   {
@@ -47,12 +45,6 @@ export default [
     path: '/tabs',
     name: 'tabs',
     component: tabs
-   
-  },
-  {
-    path: '/RegularTableView',
-    name: 'RegularTableView',
-    component: RegularTableView
    
   },
   {
