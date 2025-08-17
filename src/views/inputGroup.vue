@@ -1,5 +1,6 @@
     <template>
-      <div class="w-full mt-[230px] lg:ml-[150px] md:ml-[150px] mr-4 ml-[5px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]">
+    <div
+        class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[385px]  2xl:mr-[270px]">
         <baseCard>
 
           <div class="flex lg:flex-row md:flex-row  flex-col gap-4 b w-full ">

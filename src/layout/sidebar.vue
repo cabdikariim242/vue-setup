@@ -200,7 +200,7 @@
           <router-link :to="{ name: 'fileupload' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <i class="fa fa-cloud text-[20px]  text-[#4b93b1] dark:text-white"></i>
               <p v-if="!toggle"
                 class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white ">
                 fileupload
@@ -213,7 +213,7 @@
           <router-link :to="{ name: 'ImageZoomView' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <i class="fa-solid fa-image text-[20px]  text-[#4b93b1] dark:text-white"></i>
               <p v-if="!toggle"
                 class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white ">
                 ImageZoomView
@@ -224,12 +224,26 @@
             </div>
           </router-link>
 
+                    <router-link :to="{ name: 'TypoView' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="fa-solid fa-image text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <p v-if="!toggle"
+                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white ">
+                TypoView
+              </p>
+              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+                TypoView
+              </p>
+            </div>
+          </router-link>
+
 
 
           <router-link :to="{ name: 'SelectBox' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-chevron-down text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <i class="fa-solid fa-atom text-[20px]  text-[#4b93b1] dark:text-white"></i>
               <p v-if="!toggle"
                 class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white">
                 SelectBox
@@ -475,7 +489,7 @@
           <router-link :to="{ name: 'fileupload' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <i class=" fa fa-cloud text-[18px]  text-[#4b93b1] dark:text-white "></i>
               <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white ">
                 fileupload
               </p>
@@ -485,7 +499,7 @@
           <router-link :to="{ name: 'ImageZoomView' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <i class="fa-solid fa-image text-[18px]  text-[#4b93b1] dark:text-white "></i>
               <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white ">
                 ImageZoomView
               </p>
@@ -498,7 +512,7 @@
           <router-link :to="{ name: 'SelectBox' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
-              <i class="fa-solid fa-chevron-down text-[18px]  text-[#4b93b1] dark:text-white"></i>
+              <i class="fa-solid fa-atom text-[18px]  text-[#4b93b1] dark:text-white"></i>
               <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white">
                 SelectBox
               </p>

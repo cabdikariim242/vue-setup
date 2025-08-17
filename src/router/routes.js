@@ -18,6 +18,7 @@ const CheckBox = () =>  import('@/views/CheckBox.vue')
 const fileupload = () =>  import('@/views/fileupload.vue')
 const SelectBox = () =>  import('@/views/SelectBox.vue')
 const TomSelectView = () =>  import('@/views/TomSelectView.vue')
+const TypoView = () =>  import('@/views/TypoView.vue')
 
 
 export default [
@@ -119,6 +120,12 @@ export default [
     name: 'TomSelectView',
     component: TomSelectView
   },
+       {
+    path: '/TypoView',
+    name: 'TypoView',
+    component: TypoView
+  },
+ 
  
  
 ]

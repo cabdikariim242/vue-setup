@@ -1,7 +1,7 @@
 <template>
-  <div
-    class="flex flex-col w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px] 2xl:ml-[360px]  2xl:mr-[245px]">
-    <BaseCard class=" bg-white dark:bg-black dark:text-white rounded-2xl shadow-lg">
+    <div
+        class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[385px]  2xl:mr-[270px]">
+    <BaseCard>
       <h1 class="text-left text-[18px] mt-4 mb-4 ml-4">Zoom Images</h1>
       <hr>
       <h4 class="text-[18px] m-6">Image zoom lets users view pictures in greater detail by hovering or tapping. This
@@ -82,7 +82,11 @@
 </template>
 
 <script>
+import BaseCard from '@/components/BaseCard.vue';
 export default {
+  components: {
+    BaseCard,
+  },
   data() {
     return {
       zoomed: false,

@@ -1,7 +1,6 @@
 <template>
-  <div
-    class="flex flex-col mt-[202px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px] 2xl:ml-[360px] 2xl:mr-[270px]"
-  >
+    <div
+        class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[385px]  2xl:mr-[270px]">
     <div
       class="p-10 bg-white dark:bg-[#0f0f0f]  dark:text-white w-full rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
     >

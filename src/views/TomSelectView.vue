@@ -1,8 +1,8 @@
 <!-- src/views/TomSelectView.vue -->
 <template>
     <div
-        class="flex flex-col w-full p-6 mt-[322px] md:ml-[150px] ml-[10px] lg:ml-[150px] z-[8] lg:mr-[150px] md:mr-[150px] mr-[10px] 2xl:ml-[360px]  2xl:mr-[270px]">
-        <BaseCard class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg transition-colors duration-300">
+        class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[385px]  2xl:mr-[270px]">
+        <BaseCard>
             <h1 class="text-2xl mt-4 ml-8 text-gray-900 dark:text-gray-100">DIFERENT ATOM SELECTORS</h1>
             <hr class="mt-[20px] mb-4 border-gray-300 dark:border-gray-600">
             <h2 class="px-4 mb-4 text-xl text-gray-800 dark:text-gray-200">Examples of tom selector</h2>
@@ -80,6 +80,9 @@ import 'tom-select/dist/css/tom-select.css'
 import BaseCard from '@/components/BaseCard.vue'
 
 export default {
+    components: {
+        BaseCard
+    },
     mounted() {
         new TomSelect('#basic')
         new TomSelect('#multi', { plugins: ['remove_button'] })

@@ -1,7 +1,6 @@
 <template>
-  <div
-    class="flex gap-5 w-full flex-col lg:mt-[100px] md:mt-[102px] mt-[150px] lg:ml-[125px] md:ml-[150px] mr-[20px] ml-[20px] z-[8] 2xl:ml-[360px]  2xl:mr-[270px]"
-  >
+    <div
+        class=" w-full lg:mt-[202px] md:mt-[102px] mt-[170px] lg:ml-[150px] md:ml-[150px] mr-[30px] ml-[30px] z-[8] 2xl:ml-[385px]  2xl:mr-[270px]">
   <div>
   </div>
     <div class="lg:mr-[3rem] md:mr-60 mr-2 2xl:mr-[1rem] lg:mt-[0px] md:mt-[0px] mt-[200px]">
