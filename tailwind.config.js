@@ -6,6 +6,7 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    
     extend: {
       colors: {
         darkbg: '#1e293b',   // background madow
