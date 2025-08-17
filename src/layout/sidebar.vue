@@ -46,37 +46,9 @@
       </div>
 
       <!-- content -->
-      <router-link
-        :to="{ name: 'buttons' }"
-        class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-floppy-disk text-[20px] text-[#4b93b1] dark:text-white"></i>
-          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
-            BUTTONS
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-            BUTTONS
-          </p>
-        </div>
-      </router-link>
+      
 
-      <router-link
-        :to="{ name: 'inputGroup' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"></i>
-          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
-            INPUTGROUPS
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-            INPUTGROUPS
-          </p>
-        </div>
-      </router-link>
+     
 
       <router-link
         :to="{ name: 'alert' }"
@@ -152,6 +124,21 @@
           </p>
         </div>
       </router-link>
+      <router-link
+        :to="{ name: 'buttons' }"
+        exact-active-class="dropdown-active"
+        class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)] "
+      >
+        <div class=" gap-3 mt-5 m-3 flex justify-start items-center">
+          <i class="fa-solid fa-calendar text-[#4b93b1] text-[18px] dark:text-white"></i>
+          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] link-text font-[500] dark:text-white">
+            buttons
+          </p>
+          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+            buttons
+          </p>
+        </div>
+      </router-link>
 
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
@@ -163,6 +150,19 @@
               </p>
               <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
                 RadioButton
+              </p>
+            </div>
+          </router-link>
+          <router-link :to="{ name: 'inputGroup' }" exact-active-class="dropdown-active"
+            class="rounded-lg  hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 mt-5 flex justify-start items-center">
+              <i class="far fa-circle  text-[#4b93b1] text-[20px] dark:text-white"></i>
+              <p v-if="!toggle"
+                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text  dark:text-white">
+                inputGroup
+              </p>
+              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white ">
+                inputGroup
               </p>
             </div>
           </router-link>
@@ -207,6 +207,19 @@
               </p>
               <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
                 fileupload
+              </p>
+            </div>
+          </router-link>
+          <router-link :to="{ name: 'ImageZoomView' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="fa-solid fa-upload text-[20px]  text-[#4b93b1] dark:text-white"></i>
+              <p v-if="!toggle"
+                class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] link-text dark:text-white ">
+                ImageZoomView
+              </p>
+              <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] link-text dark:text-white">
+                ImageZoomView
               </p>
             </div>
           </router-link>
@@ -293,21 +306,7 @@
 
       
 
-      <router-link
-        :to="{ name: 'ImageZoomView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
-          <p v-if="!toggle" class="group-hover:flex text-[15px] hidden text-[#465569] font-[500] dark:text-white">
-            ImageZoomView
-          </p>
-          <p v-if="toggle" class="text-[#465569] text-[15px] font-[500] dark:text-white">
-            ImageZoomView
-          </p>
-        </div>
-      </router-link>
+     
 
       <router-link
         :to="{ name: 'RegularForm' }"
@@ -355,27 +354,7 @@
       </div>
 
       <!-- content -->
-      <router-link
-        :to="{ name: 'buttons' }"
-        class="mx-2 rounded-lg mt-5 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-floppy-disk text-[18px] text-[#4b93b1] dark:text-white"></i>
-          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">BUTTONS</p>
-        </div>
-      </router-link>
-
-      <router-link
-        :to="{ name: 'inputGroup' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-regular fa-keyboard text-[20px] text-[#4b93b1] dark:text-white"></i>
-          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">INPUTGROUPS</p>
-        </div>
-      </router-link>
+      
 
       <router-link
         :to="{ name: 'alert' }"
@@ -437,12 +416,32 @@
 
             </div>
           </router-link>
+          <router-link :to="{ name: 'buttons' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="far fa-circle text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <p class=" text-[15px]  text-[#465569] font-[500] link-text  dark:text-white">
+                buttons
+              </p>
+
+            </div>
+          </router-link>
           <router-link :to="{ name: 'RadioButton' }" exact-active-class="dropdown-active"
             class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
             <div class=" gap-3 mx-3 flex justify-start items-center">
               <i class="far fa-circle text-[18px]  text-[#4b93b1] dark:text-white "></i>
               <p class=" text-[15px]  text-[#465569] font-[500] link-text  dark:text-white">
                 RadioButton
+              </p>
+
+            </div>
+          </router-link>
+          <router-link :to="{ name: 'inputGroup' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="far fa-circle text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <p class=" text-[15px]  text-[#465569] font-[500] link-text  dark:text-white">
+                inputGroup
               </p>
 
             </div>
@@ -479,6 +478,16 @@
               <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] dark:text-white "></i>
               <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white ">
                 fileupload
+              </p>
+
+            </div>
+          </router-link>
+          <router-link :to="{ name: 'ImageZoomView' }" exact-active-class="dropdown-active"
+            class="mx-2 rounded-lg hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+            <div class=" gap-3 mx-3 flex justify-start items-center">
+              <i class="fa-solid fa-upload text-[18px]  text-[#4b93b1] dark:text-white "></i>
+              <p class=" text-[15px]  text-[#465569] font-[500] link-text dark:text-white ">
+                ImageZoomView
               </p>
 
             </div>
@@ -548,16 +557,7 @@
       </router-link>
       
 
-      <router-link
-        :to="{ name: 'ImageZoomView' }"
-        class="mx-2 rounded-lg mt-4 hover:shadow-[0_4px_6px_rgba(0,0,0,0.6)]  dark:hover:bg-[#1e1e1e] 
-         dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
-      >
-        <div class="ml-6 my-4 gap-3 mx-6 flex justify-start items-center">
-          <i class="fa-solid fa-magnifying-glass-minus text-[#4b93b1] dark:text-white"></i>
-          <p class="text-[15px] text-[#465569] font-[500] dark:text-white">ImageZoomView</p>
-        </div>
-      </router-link>
+      
 
       <router-link
         :to="{ name: 'RegularForm' }"
