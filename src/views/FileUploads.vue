@@ -10,7 +10,7 @@
         <div class="p-6 space-y-4  dark:text-black">
           <div class="space-y-2 flex flex-col">
             <h2 class="mb-8 font-bold text-lg">Single File Upload</h2>
-               <SingleFileUploadSimple
+                <SingleFileUploadSimple
       accept="image/*,.pdf"
       endpoint="/api/upload"
       :maxSizeMB="15"
@@ -24,8 +24,7 @@
         <div class="p-6 space-y-4 dark:text-black">
           <div class="space-y-2 flex flex-col">
             <h2 class="my-6 font-bold text-lg">Multiple Files Upload</h2>
-            
-    <DoubleFileUploadSimple
+                <DoubleFileUploadSimple
       acceptA="application/pdf"
       acceptB="image/*"
       endpoint="/api/upload-pair"
